@@ -1,13 +1,23 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import SectionHeading from "./SectionHeading";
 import CarouselCard from "./CarouselCard";
 import { projectsData } from "../_lib/data";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useActiveTab } from "../_context/ActiveTabContext";
 
 export default function Projects() {
+  const {ref, inView} = useInView({threshold:0.1});
+  const {setActiveTab} = useActiveTab();
+
+  useEffect(()=>{
+    if(inView){
+      setActiveTab('Projects')
+    }
+  },[inView])
   return (
-    <section className="py-6 relative">
+    <section ref={ref} className=" py-6 relative scroll-mt-20" id="projects">
       <SectionHeading>my projects</SectionHeading>
       {projectsData.map((project, index) => {
         const projectRef = useRef<HTMLDivElement>(null);
@@ -20,7 +30,7 @@ export default function Projects() {
         //convert to +ve and -ve x axis
         const Pxis = useTransform(scrollYProgress, [0, 1], [600, 0]);
         const Nxis = useTransform(scrollYProgress, [0, 1], [-600, 0]);
-        const opacityScale = useTransform(scrollYProgress, [0, 1], [0, 1]);
+        const opacityScale = useTransform(scrollYProgress, [0, 1], [0.4, 1]);
 
         return (
           <div

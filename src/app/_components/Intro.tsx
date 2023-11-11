@@ -1,14 +1,25 @@
 "use client"
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {BsArrowRight, BsGithub, BsLinkedin} from 'react-icons/bs';
 import {HiDownload} from 'react-icons/hi';
+import { useInView } from "react-intersection-observer";
+import { useActiveTab } from "../_context/ActiveTabContext";
 
 export default function Intro() {
+  const {ref, inView} = useInView({threshold:0.75});
+
+  const {setActiveTab} = useActiveTab();
+
+  useEffect(()=>{
+    if(inView){
+      setActiveTab('Home')
+    }
+  },[inView])
   return (
-    <section className="mb-28 sm:mb-0 max-w-[50rem] mx-auto text-center">
+    <section ref={ref} className="mb-28 sm:mb-0 max-w-[50rem] mx-auto text-center scroll-mt-24" id="home">
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div initial={{opacity: 0, scale: 0}} animate={{opacity: 1, scale: 1}} transition={{type:'tween', duration:0.5}}>
@@ -32,7 +43,7 @@ export default function Intro() {
         </div>
       </div>
       <motion.h1 className="mb-10 mt-6 px-4 text-2xl sm:text-4xl font-medium !leading-[1.5]" initial={{opacity: 0, scale: 0}} animate={{opacity: 1, scale: 1}} transition={{type:'just', duration:0.5}}>
-        <span className="font-bold">Hello, I'm Salman.</span> I'm a {" "} <span>Full-Stack developer</span>. I love building <span className="font-bold">efficient web applications</span>. My focus is <span className="underline">MERN Stack </span>& <span className="underline">Next.js</span>.
+        <span className="font-bold">Hello, I'm Salman.</span> I'm a {" "} <span>Full-Stack developer</span>. I love building <span className="font-bold">efficient web applications</span>. My focus is <span className="font-bold">MERN Stack </span>& <span className="font-bold">Next.js</span>.
       </motion.h1>
 
       <motion.div className="flex flex-col sm:flex-row justify-center items-center gap-2 px-4 text-lg font-medium"
