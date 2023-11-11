@@ -66,7 +66,7 @@ export const projectsData = [
     description:
       "A NextJS e commerce application (Full stack) built completely on NextJS for both front end and backend with tailwind CSS and tail blocks. Makes perfect use of Server Side Rendering and Client Side Rendering. Has a dedicated admin dashboard for product management, with both light and dark Theme.",
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "JWT","Context API", ],
-    imageUrl: "#",
+    imageUrl: ['/FitWear1.png','/FitWear2.png'],
   },
   {
     title: "MyNotes",
@@ -75,7 +75,7 @@ export const projectsData = [
     Created an OTP function using nodemailer for email verification.
     Used environment variables for protecting important information.`,
     tags: ["React", "Express", "MongoDB", "NodeJS", "Context API","Bootstrap"],
-    imageUrl: "#",
+    imageUrl: ['/MyNotes1.png','/MyNotes2.png'],
   },
   {
     title: "NewsGuy",
@@ -83,7 +83,7 @@ export const projectsData = [
     the news from backend
     and serve it on front end. Used bootstrap for UI.`,
     tags: ["React", "Express", "MongoDB", "NodeJS", "Context API","Bootstrap"],
-    imageUrl: "#",
+    imageUrl: ['/NewsGuy1.png','/NewsGuy2.png'],
   },
   {
     title: "BingeWatch",
@@ -91,14 +91,14 @@ export const projectsData = [
     fetch and display Movie/Show details. Uses dynamic routing for
     displaying the particular show details.`,
     tags: ["NextJS","React", "Rapid API", "MongoDB", "NodeJS",],
-    imageUrl: "#",
+    imageUrl: ['/BingeWatch1.png','/BingeWatch2.png'],
   },
   {
     title: "MyChat",
     description:`A simple real-time chat application that uses React and Socket IO to
     enable message sharing among the participants inside the same room.`,
     tags: ["React", "Socket.io", "NodeJS",],
-    imageUrl: "#",
+    imageUrl: ['/MyChat1.png','/MyChat2.png'],
   },
 ] as const;
 
