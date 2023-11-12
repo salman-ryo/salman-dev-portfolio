@@ -10,11 +10,11 @@ import { useActiveTab } from "../_context/ActiveTabContext";
 const ScrollLink = Scroll.Link;
 
  function ClientSideHeader() {
-  const {activeTab, setActiveTab} = useActiveTab();
+  const {activeTab, setActiveTab, setLastClickTime} = useActiveTab();
   return (
     <header className="z-[999] relative">
       <motion.div
-        className="fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full bg-white border border-white border-opacity-40 bg-opacity-80 filter shadow-lg shadow-black/[0.03] backdrop-blur-sm "
+        className="fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none sm:top-6 sm:h-[3.25rem] sm:w-[30rem] sm:rounded-full bg-white border border-white border-opacity-40 bg-opacity-80 filter shadow-lg shadow-black/[0.03] backdrop-blur-sm "
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
@@ -29,7 +29,9 @@ const ScrollLink = Scroll.Link;
               duration={800}
               offset={-100}
               
-              onClick={()=>{setActiveTab(link.name)}}
+              onClick={()=>{setActiveTab(link.name);
+                            setLastClickTime(Date.now())
+              }}
             >
                 <motion.li
                   className="relative h-3/4 flex justify-center items-center"

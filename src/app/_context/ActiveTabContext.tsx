@@ -5,7 +5,9 @@ import { error } from 'console';
 
 type ActiveTabContextType = {
     activeTab: string;
-    setActiveTab: React.Dispatch<React.SetStateAction<string>>
+    setActiveTab: React.Dispatch<React.SetStateAction<string>>;
+    lastClickTime: number;
+    setLastClickTime: React.Dispatch<React.SetStateAction<number>>;
 }
 
 //either this type or null type
@@ -17,10 +19,11 @@ export const ActiveTabContext = createContext<ActiveTabContextType | null>(null)
 
 //inline type definition <>
 export default function ActiveTabContextProvider({children} : {children : React.ReactNode}) {
-    const [activeTab, setActiveTab] = useState<string>("Home")
+    const [activeTab, setActiveTab] = useState<string>("Home");
+    const [lastClickTime, setLastClickTime] = useState(0)
 
   return (
-    <ActiveTabContext.Provider value={{ activeTab, setActiveTab}}>{children}</ActiveTabContext.Provider>
+    <ActiveTabContext.Provider value={{ activeTab, setActiveTab, lastClickTime, setLastClickTime}}>{children}</ActiveTabContext.Provider>
   )
 }
 

@@ -1,23 +1,20 @@
 "use client"
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {BsArrowRight, BsGithub, BsLinkedin} from 'react-icons/bs';
 import {HiDownload} from 'react-icons/hi';
-import { useInView } from "react-intersection-observer";
-import { useActiveTab } from "../_context/ActiveTabContext";
+import { useSectionInView } from "../_lib/hooks";
+import Scroll from 'react-scroll';
+import dynamic from "next/dynamic";
+const ScrollLink = Scroll.Link;
 
-export default function Intro() {
-  const {ref, inView} = useInView({threshold:0.75});
 
-  const {setActiveTab} = useActiveTab();
+  function NoSSRComponent() {
+  //use custom hook takes tab, threshold as props
+  const {ref} = useSectionInView('Home',0.75);
 
-  useEffect(()=>{
-    if(inView){
-      setActiveTab('Home')
-    }
-  },[inView])
   return (
     <section ref={ref} className="mb-28 sm:mb-0 max-w-[50rem] mx-auto text-center scroll-mt-24" id="home">
       <div className="flex items-center justify-center">
@@ -50,10 +47,17 @@ export default function Intro() {
       initial={{y:100, opacity:0}}
       animate={{y:0, opacity:1}}
       transition={{delay: 0.15}}>
+        <ScrollLink
+          to={"contact"}
+          spy
+          smooth
+          duration={800}
+          offset={-100}
+        >
         <Link href={"#contact"} className="group bg-slate-800 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-slate-950 active:scale-105 transition">
             Contact me here <BsArrowRight className="opacity-80 group-hover:translate-x-2 transition"/>
         </Link>
-
+        </ScrollLink>
         <a href="/CV.pdf" download={true} className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition border border-black/10">
           Download CV <HiDownload className="opacity-80 group-hover:translate-y-1 transition"/>
         </a>
@@ -68,3 +72,6 @@ export default function Intro() {
     </section>
   );
 }
+
+const Intro = dynamic(()=>Promise.resolve(NoSSRComponent),{ssr:false});
+export default Intro;

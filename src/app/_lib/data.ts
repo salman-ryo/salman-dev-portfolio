@@ -23,10 +23,10 @@ export const links = [
     name: "Skills",
     hash: "#skills",
   },
-  {
-    name: "Experience",
-    hash: "#experience",
-  },
+  // {
+  //   name: "Experience",
+  //   hash: "#experience",
+  // },
   {
     name: "Contact",
     hash: "#contact",
@@ -103,18 +103,19 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
-  "MongoDB",
-  "Redux Toolkit",
-  "Express",
-  "Python",
-  "Framer Motion",
+  { name: "HTML", url: { light: '/skills/light/html.svg', dark: '/skills/dark/html.svg' } },
+  { name: "CSS", url: { light: '/skills/light/css.svg', dark: '/skills/dark/css.svg' } },
+  { name: "JavaScript", url: { light: '/skills/light/js.svg', dark: '/skills/dark/js.svg' } },
+  { name: "TypeScript", url: { light: '/skills/light/ts.svg', dark: '/skills/dark/ts.svg' } },
+  { name: "React", url: { light: '/skills/light/react.svg', dark: '/skills/dark/react.svg' } },
+  { name: "Next.js", url: { light: '/skills/light/nextjs.svg', dark: '/skills/dark/nextjs.svg' } },
+  { name: "Node.js", url: { light: '/skills/light/node.svg', dark: '/skills/dark/node.svg' } },
+  { name: "Git", url: { light: '/skills/light/git.svg', dark: '/skills/dark/git.svg' } },
+  { name: "Tailwind", url: { light: '/skills/light/tailwind.svg', dark: '/skills/dark/tailwind.svg' } },
+  { name: "MongoDB", url: { light: '/skills/light/mongo.png', dark: '/skills/dark/mongo.png' } },
+  { name: "Redux Toolkit", url: { light: '/skills/light/redux.png', dark: '/skills/dark/redux.png' } },
+  { name: "Express", url: { light: '/skills/light/express.svg', dark: '/skills/dark/express.svg' } },
+  { name: "Python", url: { light: '/skills/light/python.svg', dark: '/skills/dark/python.svg' } },
+  { name: "REST API", url: { light: '/skills/light/api.png', dark: '/skills/dark/api.png' } },
+  { name: "Framer Motion", url: { light: '/skills/light/framermotion.png', dark: '/skills/dark/framermotion.png' } },
 ] as const;

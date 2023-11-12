@@ -1,7 +1,9 @@
+import Footer from "./_components/Footer";
 import Header from "./_components/Header";
 import ActiveTabContextProvider from "./_context/ActiveTabContext";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +25,8 @@ export default function RootLayout({
         <ActiveTabContextProvider>
         <Header/>
         {children}
+        <Footer/>
+        <Toaster position="bottom-center"/>
         </ActiveTabContextProvider>
       </body>
     </html>

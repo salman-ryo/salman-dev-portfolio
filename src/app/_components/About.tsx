@@ -1,20 +1,13 @@
 "use client"
-import React, { useEffect } from 'react';
+import React from 'react';
 import SectionHeading from './SectionHeading';
-import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import { useActiveTab } from '../_context/ActiveTabContext';
+import { useSectionInView } from '../_lib/hooks';
 
 export default function About() {
-  const {ref, inView} = useInView({threshold:0.75});
 
-  const {setActiveTab} = useActiveTab();
+  const {ref} = useSectionInView('About',0.75);
 
-  useEffect(()=>{
-    if(inView){
-      setActiveTab('About')
-    }
-  },[inView])
   return (
     <motion.section ref={ref} className='mb-8 sm:mb-40 max-w-[45rem] text-center leading-8 mx-auto'
     initial={{y:100, opacity:0}}
