@@ -26,7 +26,7 @@ export default function Skills() {
   return (
     <section id="skills" ref={ref} className=" mb-28 sm:mb-48 text-center mx-auto max-w-[53rem] sm:pt-10">
       <SectionHeading>my skills</SectionHeading>
-        <ul className=" flex flex-wrap justify-center gap-5 sm:gap-8 px-4 sm:px-0">
+        <ul className=" flex flex-wrap justify-center items-center gap-5 sm:gap-8 px-6 sm:px-0">
           {skillsData.map((skill, index) => {
             return (
               <motion.li key={index} className="w-fit h-fit flex justify-center items-center flex-col"
