@@ -41,14 +41,14 @@ export default function Projects() {
                 scale: opacityScale,
               }}
             >
-              <h3 className="text-2xl font-medium">{project.title}</h3>
+              <h3 className="text-2xl font-medium dark:text-yellow-400">{project.title}</h3>
               <p className="mt-2 leading-relaxed">{project.description}</p>
-              <ul className="flex flex-wrap items-center justify-center mt-4 gap-2">
+              <ul className="flex flex-wrap items-center justify-center mt-4 gap-2 p-1">
                 {project.tags.map((tag, index) => {
                   return (
                     <li
                       key={index}
-                      className="bg-black/[0.7] text-white px-3 py-1 text-[0.7rem] uppercase tracking-wider  rounded-full"
+                      className="bg-black/[0.8] border dark:border-cyan-400 dark:bg-gradient-to-tr to-[#012b40] from-[#070140] text-white dark:text-blue-300 px-3 py-1 text-[0.7rem] uppercase tracking-wider cursor-pointer hover:scale-110 dark:hover:bg-none dark:hover:text-white rounded-full"
                     >
                       {tag}
                     </li>

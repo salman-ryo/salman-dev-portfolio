@@ -24,10 +24,11 @@ export default function CarouselCard ({firstUrl,secondUrl}: CarouselProps) {
         autoPlay: true,
       };
   return (
-    <div>
+    <div className='dark:border-[1.5px] dark:border-white rounded-2xl overflow-hidden
+    '>
         <Carousel {...settings} >
-        <img src={firstUrl} alt='project' className='rounded-2xl object-cover '/>
-        <img src={secondUrl} alt='project' className='rounded-2xl object-cover '/>
+        <img src={firstUrl} alt='project' className='object-cover'/>
+        <img src={secondUrl} alt='project' className='object-cover'/>
         </Carousel>
     </div>
   )

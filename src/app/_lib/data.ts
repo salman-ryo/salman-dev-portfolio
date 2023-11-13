@@ -1,11 +1,3 @@
-import React from "react";
-// import { CgWorkAlt } from "react-icons/cg";
-// import { FaReact } from "react-icons/fa";
-// import { LuGraduationCap } from "react-icons/lu";
-// import corpcommentImg from "@/public/corpcomment.png";
-// import rmtdevImg from "@/public/rmtdev.png";
-// import wordanalyticsImg from "@/public/wordanalytics.png";
-
 export const links = [
   {
     name: "Home",
@@ -23,80 +15,43 @@ export const links = [
     name: "Skills",
     hash: "#skills",
   },
-  // {
-  //   name: "Experience",
-  //   hash: "#experience",
-  // },
   {
     name: "Contact",
     hash: "#contact",
   },
 ];
 
-// export const experiencesData = [
-//   {
-//     title: "Graduated bootcamp",
-//     location: "Miami, FL",
-//     description:
-//       "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-//     icon: React.createElement(LuGraduationCap),
-//     date: "2019",
-//   },
-//   {
-//     title: "Front-End Developer",
-//     location: "Orlando, FL",
-//     description:
-//       "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-//     icon: React.createElement(CgWorkAlt),
-//     date: "2019 - 2021",
-//   },
-//   {
-//     title: "Full-Stack Developer",
-//     location: "Houston, TX",
-//     description:
-//       "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-//     icon: React.createElement(FaReact),
-//     date: "2021 - present",
-//   },
-// ] as const;
-
 export const projectsData = [
   {
     title: "Fit-Wear",
     description:
-      "A NextJS e commerce application (Full stack) built completely on NextJS for both front end and backend with tailwind CSS and tail blocks. Makes perfect use of Server Side Rendering and Client Side Rendering. Has a dedicated admin dashboard for product management, with both light and dark Theme.",
+      "Engineered a comprehensive NextJS e-commerce application, where both the front end and backend are seamlessly built on NextJS. The user interface boasts a modern aesthetic thanks to Tailwind CSS and Tail Blocks, while the strategic implementation of Server Side Rendering and Client Side Rendering optimizes performance. Notably, the application features a dedicated admin dashboard facilitating efficient product management. The dashboard offers both light and dark themes for user customization, enhancing the overall user experience.",
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "JWT","Context API", ],
     imageUrl: ['/FitWear1.png','/FitWear2.png'],
   },
   {
     title: "MyNotes",
-    description:`A Fully responsive MERN stack cloud application to store notes that uses Reactjs, Expressjs, Mongodb, Json web token for authentication and authorisation, Context API, Restful API, React Bootstrap and custom components and icons.
-    User password is stored in the database using bcryptJS encryption and salts
-    Created an OTP function using nodemailer for email verification.
-    Used environment variables for protecting important information.`,
+    description:`Crafted a dynamic MERN stack cloud application with full responsiveness, designed to seamlessly store and manage notes. Leveraging the power of React.js, Express.js, MongoDB, and Json Web Token, the application ensures robust authentication and authorization. Employing the Context API and Restful API, in combination with React Bootstrap, custom components, and icons, the user interface offers an intuitive experience.
+
+    Security is paramount, with user passwords securely encrypted using bcryptJS and salts before being stored in the database. Implemented an email verification system through nodemailer's OTP function, enhancing account security.`,
     tags: ["React", "Express", "MongoDB", "NodeJS", "Context API","Bootstrap"],
     imageUrl: ['/MyNotes1.png','/MyNotes2.png'],
   },
   {
     title: "NewsGuy",
-    description:`A simple front end React news application that uses a news api to fetch
-    the news from backend
-    and serve it on front end. Used bootstrap for UI.`,
+    description:`Developed a user-friendly front-end React news application that seamlessly fetches news from a backend using a News API. The application showcases a polished UI crafted with Bootstrap, ensuring a clean and intuitive design. Users can stay informed and navigate through the latest news effortlessly, making it an engaging platform for accessing up-to-date information.`,
     tags: ["React", "Express", "MongoDB", "NodeJS", "Context API","Bootstrap"],
     imageUrl: ['/NewsGuy1.png','/NewsGuy2.png'],
   },
   {
     title: "BingeWatch",
-    description:`A simple front end NextJS application that uses a rapid api (Netflix) to
-    fetch and display Movie/Show details. Uses dynamic routing for
-    displaying the particular show details.`,
+    description:`Designed a sleek front-end NextJS application that leverages a Rapid API (Netflix) to dynamically fetch and display movie/show details. The implementation of dynamic routing ensures a seamless and intuitive user experience when exploring specific show details. The application provides an immersive platform for users to discover and explore their favorite movies and shows.`,
     tags: ["NextJS","React", "Rapid API", "MongoDB", "NodeJS",],
     imageUrl: ['/BingeWatch1.png','/BingeWatch2.png'],
   },
   {
     title: "MyChat",
-    description:`A simple real-time chat application that uses React and Socket IO to
-    enable message sharing among the participants inside the same room.`,
+    description:`Introduced 'MyChat', a real-time chat application utilizing React and Socket.IO to facilitate seamless message sharing among participants within the same room. This interactive platform enhances communication through instant updates, providing a dynamic and engaging environment for users. The combination of React and Socket.IO in the context of Node.js creates a robust foundation for real-time chat functionality.`,
     tags: ["React", "Socket.io", "NodeJS",],
     imageUrl: ['/MyChat1.png','/MyChat2.png'],
   },

@@ -5,8 +5,12 @@ import { skillsData } from "../_lib/data";
 import SectionHeading from "./SectionHeading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "../_lib/hooks";
+import { useActiveTab } from "../_context/ActiveTabContext";
 
 export default function Skills() {
+
+    const {theme} = useActiveTab();
+
     const OneByOneVariant ={
         initial: {
             opacity: 0,
@@ -32,7 +36,7 @@ export default function Skills() {
               transition={{delay: 0.05*index }}
               >
                 <Image
-                  src={skill.url.light}
+                  src={theme ==='light'? skill.url.light : skill.url.dark}
                   alt={skill.name}
                   height={64}
                   width={64}

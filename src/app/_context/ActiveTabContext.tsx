@@ -1,29 +1,32 @@
 'use client'
 import React, { createContext, useContext, useState } from 'react'
-import { links } from '../_lib/data';
-import { error } from 'console';
 
 type ActiveTabContextType = {
     activeTab: string;
     setActiveTab: React.Dispatch<React.SetStateAction<string>>;
     lastClickTime: number;
     setLastClickTime: React.Dispatch<React.SetStateAction<number>>;
+    theme: ThemeType;
+    setTheme: React.Dispatch<React.SetStateAction<ThemeType>>;
 }
 
 //either this type or null type
 export const ActiveTabContext = createContext<ActiveTabContextType | null>(null);
 
 //explicit type definition
-// type TabNames = (typeof links)[number]["name"];
+type ThemeType = 'light' | "dark";
+
 
 
 //inline type definition <>
 export default function ActiveTabContextProvider({children} : {children : React.ReactNode}) {
     const [activeTab, setActiveTab] = useState<string>("Home");
-    const [lastClickTime, setLastClickTime] = useState(0)
+    const [lastClickTime, setLastClickTime] = useState(0);
+    const [theme, setTheme] =useState<ThemeType>('light');
+
 
   return (
-    <ActiveTabContext.Provider value={{ activeTab, setActiveTab, lastClickTime, setLastClickTime}}>{children}</ActiveTabContext.Provider>
+    <ActiveTabContext.Provider value={{ activeTab, setActiveTab, lastClickTime, setLastClickTime, theme, setTheme}}>{children}</ActiveTabContext.Provider>
   )
 }
 
