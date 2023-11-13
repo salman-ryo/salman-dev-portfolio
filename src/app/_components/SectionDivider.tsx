@@ -8,7 +8,7 @@ export default function SectionDivider() {
     initial={{y:100, opacity:0}}
     animate={{y:0, opacity:1}}
     transition={{delay:0.3}}>
-      <div className='bg-purple-300 w-1 h-16 my-10 rounded-full'></div>
+      <div className='bg-purple-200 dark:bg-purple-950 w-1 h-16 my-10 rounded-full'></div>
     </motion.div>
   );
 }

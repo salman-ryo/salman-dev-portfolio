@@ -1,14 +1,14 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import SectionHeading from "./SectionHeading";
 import CarouselCard from "./CarouselCard";
 import { projectsData } from "../_lib/data";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useSectionInView } from "../_lib/hooks";
+import { BiLinkExternal } from "react-icons/bi";
 
 export default function Projects() {
-  const {ref} = useSectionInView('Projects', 0.15);
-
+  const { ref } = useSectionInView("Projects", 0.1);
   return (
     <section ref={ref} className=" py-6 relative scroll-mt-20" id="projects">
       <SectionHeading>my projects</SectionHeading>
@@ -18,7 +18,7 @@ export default function Projects() {
           target: projectRef,
 
           //start of the container, end of our viewport is the initial value 0, center of container meets center of viewport is the final value 1
-          offset: ["start end", "center center"],
+          offset: ["start end", "500px end"],
         });
         //convert to +ve and -ve x axis
         const Pxis = useTransform(scrollYProgress, [0, 1], [600, 0]);
@@ -41,7 +41,16 @@ export default function Projects() {
                 scale: opacityScale,
               }}
             >
-              <h3 className="text-2xl font-medium dark:text-yellow-400">{project.title}</h3>
+              <h3 className="text-2xl font-medium flex  items-center justify-center gap-2  dark:text-yellow-400">
+                {project.title}
+                {project.hostedUrl ? (
+                  <span>
+                    <a href={project.hostedUrl} target="_blank">
+                      <BiLinkExternal className=" text-blue-400 hover:text-cyan-300 hover:scale-110 font-bold cursor-pointer" />
+                    </a>
+                  </span>
+                ) : null}
+              </h3>
               <p className="mt-2 leading-relaxed">{project.description}</p>
               <ul className="flex flex-wrap items-center justify-center mt-4 gap-2 p-1">
                 {project.tags.map((tag, index) => {

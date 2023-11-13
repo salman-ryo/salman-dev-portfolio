@@ -64,10 +64,10 @@ const ScrollLink = Scroll.Link;
           Download CV <HiDownload className="opacity-80 group-hover:translate-y-1 transition"/>
         </a>
 
-        <a href="https://www.linkedin.com/in/salman-khan-a2957925b/" target="_blank" className="bg-white dark:bg-black text-slate-700 dark:text-slate-100 dark:border-x-cyan-300 hover:text-slate-950 text-[1.35rem] p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-110 active:scale-105 transition border border-black/10">
+        <a href="https://www.linkedin.com/in/salman-khan-a2957925b/" target="_blank" className="bg-white dark:bg-black text-slate-700 dark:text-slate-100 dark:border-x-cyan-300 hover:text-slate-950 text-[1.35rem] p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-110 active:scale-105 transition border-[1.5px] border-black/10">
           <BsLinkedin/>
         </a>
-        <a href="https://github.com/Salman-at-github" target="_blank" className="bg-white dark:bg-black dark:text-slate-100 dark:border dark:border-x-cyan-300 dark:hover:animate-spin text-slate-700 hover:text-slate-950 text-[1.35rem] p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-110 active:scale-105 transition border border-black/10">
+        <a href="https://github.com/Salman-at-github" target="_blank" className="bg-white dark:bg-black dark:text-slate-100 dark:border-x-cyan-300 dark:hover:animate-spin text-slate-700 hover:text-slate-950 text-[1.35rem] p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-110 active:scale-105 transition border-[1.5px] border-black/10">
           <BsGithub/>
         </a>
       </motion.div>

@@ -12,13 +12,11 @@ export default function Contact() {
   const { ref } = useSectionInView("Contact", 0.3);
   const animateInput = {
     initial: {
-    //   rotate: 5,
       x:10,
       y:10,
       scale: 0.5
     },
     animate: {
-    //   rotate:0,
       x:0,
       y:0,
       scale:1
@@ -29,7 +27,7 @@ export default function Contact() {
     <section
       id="contact"
       ref={ref}
-      className="mb-20 px-8 sm:px-0 sm:mb-24 w-[min(100%,38rem)] text-center mx-auto mt-10 scroll-mt-24"
+      className="pb-20 sm:pb-28 px-8 sm:px-0 w-[min(100%,38rem)] text-center mx-auto mt-10 scroll-mt-24 overflow-hidden"
     >
       <SectionHeading>Contact me</SectionHeading>
 

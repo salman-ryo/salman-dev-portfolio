@@ -28,6 +28,7 @@ export const projectsData = [
       "Engineered a comprehensive NextJS e-commerce application, where both the front end and backend are seamlessly built on NextJS. The user interface boasts a modern aesthetic thanks to Tailwind CSS and Tail Blocks, while the strategic implementation of Server Side Rendering and Client Side Rendering optimizes performance. Notably, the application features a dedicated admin dashboard facilitating efficient product management. The dashboard offers both light and dark themes for user customization, enhancing the overall user experience.",
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "JWT","Context API", ],
     imageUrl: ['/FitWear1.png','/FitWear2.png'],
+    hostedUrl: 'https://fit-wear.vercel.app'
   },
   {
     title: "MyNotes",
@@ -55,7 +56,7 @@ export const projectsData = [
     tags: ["React", "Socket.io", "NodeJS",],
     imageUrl: ['/MyChat1.png','/MyChat2.png'],
   },
-] as const;
+];
 
 export const skillsData = [
   { name: "HTML", url: { light: '/skills/light/html.svg', dark: '/skills/dark/html.svg' } },

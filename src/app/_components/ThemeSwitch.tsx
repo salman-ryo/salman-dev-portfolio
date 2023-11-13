@@ -9,6 +9,7 @@ export default function ThemeSwitch() {
     //get the theme state from context
     const {theme, setTheme} = useActiveTab();
 
+    //fetch system and local theme
     useEffect(()=>{
         //if a theme setting already exists, use that
         const localTheme = window.localStorage.getItem('theme');
@@ -40,7 +41,7 @@ export default function ThemeSwitch() {
     }
 
   return (
-    <button className='fixed top-5 right-5 p-4 text-2xl bg-white text-black dark:text-yellow-500 dark:bg-black hover:bg-black hover:text-white dark:border-[1.5px] dark:hover:bg-white dark:hover:text-black  rounded-full opacity-90' onClick={toggleTheme}>
+    <button className='fixed bottom-5 right-5 p-4 text-2xl bg-white text-black dark:text-yellow-500 dark:bg-black hover:bg-black hover:text-white border-[1.5px] border-gray-600 dark:border-white dark:hover:bg-white dark:hover:text-black  rounded-full opacity-80' onClick={toggleTheme}>
         {theme === 'light'?(<BsSun/>) : (<BsMoon />)}
         </button>
   )
