@@ -7,9 +7,9 @@ type CarouselProps ={
     images:any
 }
 
-export default function CarouselCard ({images}: CarouselProps) {
+export default function CarouselCardB ({images}: CarouselProps) {
     const settings = {
-        showArrows: false,
+        showArrows: true,
         interval: 5000,
         dynamicHeight: true,
         stopOnHover: true,
@@ -20,10 +20,10 @@ export default function CarouselCard ({images}: CarouselProps) {
         showIndicators: true,
         swipeable: true,
         emulateTouch: true,
-        autoPlay: true,
+        autoPlay: false,
       };
   return (
-    <div className='dark:border-[1.5px] dark:border-white rounded-2xl overflow-hidden
+    <div className='border-[1.5px] border-black dark:border-white rounded-2xl overflow-hidden
     '>
         <Carousel {...settings} >
           {images.map((url : string, index:number)=>{
