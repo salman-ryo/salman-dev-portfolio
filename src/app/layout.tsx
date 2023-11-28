@@ -1,5 +1,6 @@
 import Footer from "./_components/Footer";
 import Header from "./_components/Header";
+import MagicWand from "./_components/MagicWand"
 import ThemeSwitch from "./_components/ThemeSwitch";
 import ActiveTabContextProvider from "./_context/ActiveTabContext";
 import "./globals.css";
@@ -28,6 +29,7 @@ export default function RootLayout({
         {children}
         <Footer/>
         <Toaster position="bottom-center"/>
+        <MagicWand/>
         <ThemeSwitch/>
         </ActiveTabContextProvider>
       </body>

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  overflow-x: hidden;
+}
+
 #profilePhoto {
   box-shadow: 2px 4px 4px 2px rgba(225, 13, 253, 0.8);
   animation: myBlob 5s ease-in-out infinite;
@@ -42,3 +46,48 @@
   }
 }
 
+/* Mouse animation */
+.star {
+  animation: starFall 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  box-shadow: 0px 0px 100px 1px rgb(255, 0, 238);
+}
+.star2 {
+  animation: starFall2 1.5s ease-in-out;
+  transition: transform 1.5s ease-in-out;
+}
+.star3 {
+  animation: starFall3 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out;
+  box-shadow: 0px 0px 100px 1px rgb(255, 0, 238);
+
+}
+
+@keyframes starFall {
+  0% {
+      transform: translateY(0) rotate(0) scale(120%);
+      opacity: 1;
+  }
+  100% {
+      transform: translateY(30px) rotate(40deg) scale(100%);
+      opacity: 0;
+  }
+}
+@keyframes starFall3 {
+  0% {
+      transform: translateY(0) rotate(0) scale(120%);
+      opacity: 1;
+  }
+  100% {
+      transform: translateY(100px) rotate(100deg) scale(100%);
+      opacity: 0;
+  }
+}
+@keyframes starFall2 {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
