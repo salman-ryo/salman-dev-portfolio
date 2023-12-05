@@ -21,6 +21,7 @@ export default function CarouselCardB ({images}: CarouselProps) {
         swipeable: true,
         emulateTouch: true,
         autoPlay: false,
+        useKeyboardArrows:true
       };
   return (
     <div className='border-[1.5px] border-black dark:border-white rounded-2xl overflow-hidden

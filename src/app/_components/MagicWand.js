@@ -56,7 +56,7 @@ function MagicWand() {
         const xDiff = mousePosition.x - prevMousePosition.x;
         const yDiff = mousePosition.y - prevMousePosition.y;
         const distance= Math.sqrt((xDiff)**2 + (yDiff)**2)
-        if(distance >=10){
+        if(distance >=20){
             addDivAtMousePosition()
             setPrevMousePosition(mousePosition)
         }

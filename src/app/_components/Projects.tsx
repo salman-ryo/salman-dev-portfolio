@@ -66,7 +66,7 @@ export default function Projects() {
                     return (
                       <li
                         key={index}
-                        className="bg-black/[0.8] border dark:border-cyan-400 dark:bg-gradient-to-tr to-[#012b40] from-[#070140] text-white dark:text-blue-300 px-3 py-1 text-[0.7rem] uppercase tracking-wider cursor-pointer hover:scale-110 dark:hover:bg-none dark:hover:text-white rounded-full"
+                        className="bg-purple-900 border dark:border-cyan-400 dark:bg-gradient-to-tr to-[#012b40] from-[#070140] text-white dark:text-blue-300 px-3 py-1 text-[0.7rem] uppercase tracking-wider cursor-pointer hover:scale-110 dark:hover:bg-none dark:hover:text-white rounded-full"
                       >
                         {tag}
                       </li>
