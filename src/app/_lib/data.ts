@@ -37,6 +37,8 @@ export const projectsData = [
     Security is paramount, with user passwords securely encrypted using bcryptJS and salts before being stored in the database. Implemented an email verification system through nodemailer's OTP function, enhancing account security.`,
     tags: ["React", "Express", "MongoDB", "NodeJS", "Context API","Bootstrap"],
     imageUrl: ['/MyNotes1.png','/MyNotes2.png'],
+    hostedUrl: 'https://my-notes-dev.vercel.app/'
+
   },
   {
     title: "NewsGuy",
