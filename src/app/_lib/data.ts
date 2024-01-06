@@ -76,4 +76,6 @@ export const skillsData = [
   { name: "Python", url: { light: '/skills/light/python.svg', dark: '/skills/dark/python.svg' } },
   { name: "REST API", url: { light: '/skills/light/api.png', dark: '/skills/dark/api.png' } },
   { name: "Framer Motion", url: { light: '/skills/light/framermotion.png', dark: '/skills/dark/framermotion.png' } },
+  { name: "Django REST", url: { light: '/skills/light/django.png', dark: '/skills/dark/django.svg' } },
+  { name: "Flask", url: { light: '/skills/light/flask.svg', dark: '/skills/dark/flask.svg' } },
 ] as const;
