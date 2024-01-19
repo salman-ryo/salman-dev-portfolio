@@ -2,17 +2,22 @@
 import React, { useEffect, useRef, useState } from "react";
 import SectionHeading from "./SectionHeading";
 import CarouselCard from "./CarouselCard";
-import { projectsData } from "../_lib/data";
+import { projectsData, skillsData } from "../_lib/data";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useSectionInView } from "../_lib/hooks";
 import { BiLinkExternal } from "react-icons/bi";
 import OverlayImage from "./OverlayImage";
 import { BiZoomIn } from "react-icons/bi";
+import { useActiveTab } from "../_context/ActiveTabContext";
+import Link from "next/link";
+
 
 export default function Projects() {
   const { ref } = useSectionInView("Projects", 0.1);
   const [zoomImages, setZoomImages] = useState(false);
   const [selectedProjectUrl, setSelectedProjectUrl] = useState<any>([]);
+  const {theme} = useActiveTab();
+
   return (
     <section ref={ref} className=" py-6 relative scroll-mt-20" id="projects">
       {zoomImages && (
@@ -32,6 +37,8 @@ export default function Projects() {
         const Pxis = useTransform(scrollYProgress, [0, 1], [600, 0]);
         const Nxis = useTransform(scrollYProgress, [0, 1], [-600, 0]);
         const opacityScale = useTransform(scrollYProgress, [0, 1], [0.4, 1]);
+
+        const skillTags = skillsData.filter((skill)=>project.tags.includes((skill.name)))
 
         return (
           <div key={index}>
@@ -53,7 +60,7 @@ export default function Projects() {
                 <h3 className="text-2xl font-medium flex  items-center justify-center gap-2  dark:text-yellow-400">
                   {project.title}
                   {project.hostedUrl ? (
-                    <span>
+                    <span title="Visit live site">
                       <a href={project.hostedUrl} target="_blank">
                         <BiLinkExternal className=" text-blue-400 hover:text-cyan-300 hover:scale-110 font-bold cursor-pointer" />
                       </a>
@@ -61,16 +68,14 @@ export default function Projects() {
                   ) : null}
                 </h3>
                 <p className="mt-2 leading-relaxed">{project.description}</p>
-                <ul className="flex flex-wrap items-center justify-center mt-4 gap-2 p-1">
-                  {project.tags.map((tag, index) => {
-                    return (
-                      <li
-                        key={index}
-                        className="bg-purple-900 border dark:border-cyan-400 dark:bg-gradient-to-tr to-[#012b40] from-[#070140] text-white dark:text-blue-300 px-3 py-1 text-[0.7rem] uppercase tracking-wider cursor-pointer hover:scale-110 dark:hover:bg-none dark:hover:text-white rounded-full"
-                      >
-                        {tag}
-                      </li>
-                    );
+                <ul className="flex flex-wrap items-center justify-center mt-4 gap-2 p-2 border border-white dark:border-cyan-300 rounded-xl">
+                  <h2 className="font-bold text-xl shine">Tech :</h2>
+                  {skillTags.map((skill, index) => {
+                    return (<li key={index}>
+                      <Link href="#skills">
+                        <img src={theme ==='light'? skill.url.light : skill.url.dark} alt={skill.name} className="h-10 w-10 cursor-pointer hover:scale-125 transition" title="Show Skills"/>
+                        </Link>
+                        </li> );
                   })}
                 </ul>
               </motion.div>
@@ -82,7 +87,7 @@ export default function Projects() {
                 }}
               >
                 {!zoomImages && (
-                  <BiZoomIn
+                  <BiZoomIn title="View Fullscreen"
                     className="absolute top-0 right-0 sm:top-0  sm:right-0 z-[998] dark:text-cyan-100 text-2xl hover:scale-110 cursor-pointer"
                     onClick={() => {
                       setZoomImages(true);

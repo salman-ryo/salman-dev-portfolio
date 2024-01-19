@@ -1,5 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react';
+import { useActiveTab } from '../_context/ActiveTabContext';
 
 function MagicWand() {
 
@@ -22,7 +23,7 @@ function MagicWand() {
         }
     },[])
 
-    // Your array of colors
+    //  Array of colors
     const colors = ["#03e3fc", "#e573f0", "#f0ca73"];
 
     const animationClass = ['star','star2','star3']
@@ -39,8 +40,9 @@ function MagicWand() {
       const myClass = animationClass[getRandomIndex(animationClass)]
         const newDiv = document.createElement('span');
         newDiv.style.position = 'fixed';
-        newDiv.style.left = `${mousePosition.x +15}px`;
-        newDiv.style.top = `${mousePosition.y+15}px`;
+        newDiv.style.left = `${mousePosition.x +20}px`;
+        newDiv.style.top = `${mousePosition.y+20}px`;
+        newDiv.style.pointerEvents="auto"
         newDiv.innerHTML=`
                           <svg class=${myClass} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20">
                             <polygon points="50,0 61.8,38.2 100,50 61.8,61.8 50,100 38.2,61.8 0,50 38.2,38.2" fill=${myColor} />
@@ -62,8 +64,12 @@ function MagicWand() {
         }
       },[mousePosition])
 
+      const {theme} = useActiveTab();
+
+
   return (
-    <div >
+    <div id='cucu' className={`fixed z-[999]`} style={{ top: `${mousePosition.y +2}px`, left: `${mousePosition.x -11}px` , pointerEvents: 'auto'}}>
+      <img src='pointerLight.svg' alt='cursor' className='h-12'/>
   </div>
   );
 }

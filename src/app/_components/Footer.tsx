@@ -6,7 +6,7 @@ export default function Footer() {
         <p className='font-serif'>
             &copy; 2023 <a className='cursor-pointer hover:text-black dark:hover:text-yellow-200' href="https://github.com/Salman-at-github" target='_blank'>Salman alias Ryo</a>. All rights reserved.
         </p>
-        {/* <p className='font-serif'><span className='font-semibold'>About this website: </span> built using Next.js , React , TailwindCSS , Framer Motion , TypeScript , React Email & Resend , Vercel hosting</p> */}
+        
     </footer>
   )
 }

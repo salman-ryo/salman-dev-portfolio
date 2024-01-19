@@ -36,8 +36,8 @@ const ScrollLink = Scroll.Link;
           </motion.div>
         </div>
        <div className="sm:w-2/3 sm:px-3"> 
-      <motion.h1 className="mb-10 mt-6 px-4 text-2xl sm:text-4xl font-medium !leading-[1.5]" initial={{opacity: 0, scale: 0}} animate={{opacity: 1, scale: 1}} transition={{type:'just', duration:0.5}}>
-        <span className="font-semibold dark:text-yellow-400 ">Hello, I'm Salman.</span> I'm a {" "} <span className="font-semibold dark:text-cyan-100">Full-Stack </span>developer. I love building <span className="font-semibold dark:text-cyan-100">memory efficient web applications</span>. My focus is <span className="font-semibold dark:text-cyan-100">MERN Stack </span>& <span className="font-semibold dark:text-cyan-100">Next.js</span>.
+      <motion.h1 className="mb-10 md:mb-32 text-gray-800 dark:text-gray-200 mt-6 px-4 text-2xl sm:text-4xl font-medium !leading-[1.5]" initial={{opacity: 0, scale: 0}} animate={{opacity: 1, scale: 1}} transition={{type:'just', duration:0.5}}>
+        <span className="font-semibold dark:text-yellow-400 ">Hello, I'm Salman.</span> I'm a {" "} <span className="font-semibold dark:text-cyan-100">Full-Stack </span>developer. I love building <span className="font-semibold dark:text-cyan-100">performance optimized web applications</span>. My focus is <span className="font-semibold dark:text-cyan-100">MERN Stack </span>& <span className="font-semibold dark:text-cyan-100">Next.js</span>.
       </motion.h1>
 
       <motion.div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-2 items-center text-lg font-medium"

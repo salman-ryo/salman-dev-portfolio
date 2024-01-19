@@ -1,17 +1,17 @@
-"use client"
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import { links } from "../_lib/data";
-import Scroll from 'react-scroll';
+import Scroll from "react-scroll";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { useActiveTab } from "../_context/ActiveTabContext";
 
 const ScrollLink = Scroll.Link;
 
- function ClientSideHeader() {
-  const {activeTab, setActiveTab, setLastClickTime} = useActiveTab();
-  
+function ClientSideHeader() {
+  const { activeTab, setActiveTab, setLastClickTime } = useActiveTab();
+
   return (
     <header className="z-[997] relative">
       <motion.div
@@ -29,30 +29,38 @@ const ScrollLink = Scroll.Link;
               smooth
               duration={800}
               offset={-100}
-              
-              onClick={()=>{setActiveTab(link.name);
-                            setLastClickTime(Date.now())
+              onClick={() => {
+                setActiveTab(link.name);
+                setLastClickTime(Date.now());
               }}
             >
-                <motion.li
-                  className="relative h-3/4 flex justify-center items-center"
-                  initial={{ y: -100, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
+              <motion.li
+                className="relative h-3/4 flex justify-center items-center"
+                initial={{ y: -100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+              >
+                <Link
+                  href={link.hash}
+                  className={`${
+                    activeTab === link.name
+                      ? "text-gray-950 font-bold hover:text-black transition dark:hover:text-black"
+                      : "dark:hover:text-cyan-300"
+                  } w-full flex justify-center items-center p-3  transition cursor-pointer`}
                 >
-              <Link href={link.hash} className={`${activeTab === link.name? "text-gray-950 font-bold hover:text-black transition dark:hover:text-black" : "dark:hover:text-cyan-300"} w-full flex justify-center items-center p-3  transition cursor-pointer`}>
                   {link.name}
-                  {link.name === activeTab &&(
-                    <motion.span className="-z-10 bg-gray-300 dark:bg-cyan-300 rounded-full absolute inset-0"
-                    layoutId="activeTab"
-                    transition={{
-                      type:'sping',
-                      stiffness:400,
-                      damping:30
-                    }}
+                  {link.name === activeTab && (
+                    <motion.span
+                      className="-z-10 bg-gray-300 dark:bg-cyan-300 rounded-full absolute inset-0"
+                      layoutId="activeTab"
+                      transition={{
+                        type: "sping",
+                        stiffness: 400,
+                        damping: 30,
+                      }}
                     ></motion.span>
                   )}
-              </Link>
-                </motion.li>
+                </Link>
+              </motion.li>
             </ScrollLink>
           ))}
         </ul>
@@ -62,5 +70,5 @@ const ScrollLink = Scroll.Link;
 }
 
 //export it as no ssr to prevent prerender and hence prevent hydration error due to using Link inside ScrollLink
-const Header = dynamic(()=>Promise.resolve(ClientSideHeader), {ssr:false})
+const Header = dynamic(() => Promise.resolve(ClientSideHeader), { ssr: false });
 export default Header;
