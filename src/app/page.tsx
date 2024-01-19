@@ -1,9 +1,9 @@
-import Intro from './_components/Intro';
+import Intro from './_components/sections/Intro';
 import SectionDivider from './_components/SectionDivider';
-import About from './_components/About';
-import Projects from './_components/Projects';
-import Skills from './_components/Skills';
-import Contact from './_components/Contact';
+import About from './_components/sections/About';
+import Projects from './_components/sections/Projects';
+import Skills from './_components/sections/Skills';
+import Contact from './_components/sections/Contact';
 
 export default function Home() {
   return (

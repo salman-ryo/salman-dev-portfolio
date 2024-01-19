@@ -1,14 +1,14 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import SectionHeading from "./SectionHeading";
-import CarouselCard from "./CarouselCard";
-import { projectsData, skillsData } from "../_lib/data";
+import SectionHeading from "../SectionHeading";
+import CarouselCard from "../CarouselCard";
+import { projectsData, skillsData } from "../../_lib/data";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useSectionInView } from "../_lib/hooks";
+import { useSectionInView } from "../../_lib/hooks";
 import { BiLinkExternal } from "react-icons/bi";
-import OverlayImage from "./OverlayImage";
+import OverlayImage from "../OverlayImage";
 import { BiZoomIn } from "react-icons/bi";
-import { useActiveTab } from "../_context/ActiveTabContext";
+import { useActiveTab } from "../../_context/ActiveTabContext";
 import Link from "next/link";
 
 
@@ -60,7 +60,7 @@ export default function Projects() {
                 <h3 className="text-2xl font-medium flex  items-center justify-center gap-2  dark:text-yellow-400">
                   {project.title}
                   {project.hostedUrl ? (
-                    <span title="Visit live site">
+                    <span title="Visit Live Site">
                       <a href={project.hostedUrl} target="_blank">
                         <BiLinkExternal className=" text-blue-400 hover:text-cyan-300 hover:scale-110 font-bold cursor-pointer" />
                       </a>

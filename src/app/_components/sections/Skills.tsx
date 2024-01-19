@@ -1,11 +1,12 @@
 "use client"
 import Image from "next/image";
 import React from "react";
-import { skillsData } from "../_lib/data";
-import SectionHeading from "./SectionHeading";
+import { skillsData } from "../../_lib/data";
+import SectionHeading from "../SectionHeading";
 import { motion } from "framer-motion";
-import { useSectionInView } from "../_lib/hooks";
-import { useActiveTab } from "../_context/ActiveTabContext";
+import { useSectionInView } from "../../_lib/hooks";
+import { useActiveTab } from "../../_context/ActiveTabContext";
+import Link from "next/link";
 
 export default function Skills() {
 
@@ -34,7 +35,9 @@ export default function Skills() {
               initial='initial'
               whileInView='animate'
               transition={{delay: 0.05*index }}
+              viewport={{once:true}} //animate only once
               >
+                <Link href={skill.link} target="_blank" title="Visit Official Documentation Page">
                 <Image
                   src={theme ==='light'? skill.url.light : skill.url.dark}
                   alt={skill.name}
@@ -43,6 +46,7 @@ export default function Skills() {
                   className="cursor-pointer hover:scale-125 transition"
                 />
                 <h2 className="font-semibold">{skill.name}</h2>
+                </Link>
               </motion.li>
             );
           })}

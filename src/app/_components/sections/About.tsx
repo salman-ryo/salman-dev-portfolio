@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import SectionHeading from "./SectionHeading";
+import SectionHeading from "../SectionHeading";
 import { motion } from "framer-motion";
-import { useSectionInView } from "../_lib/hooks";
+import { useSectionInView } from "../../_lib/hooks";
 
 export default function About() {
   const { ref } = useSectionInView("About", 0.75);
@@ -25,17 +25,16 @@ export default function About() {
         fields since 2019, my heart and mind have always been captivated by the
         world of technology. A year of dedicated practice and learning has
         equipped me with a robust skill set in the{" "}
-        <span className="font-medium dark:text-yellow-200">MERN</span>{" "}
-        stack—covering{" "}
-        <span className="font-medium dark:text-yellow-200">HTML</span> ,{" "}
-        <span className="font-medium dark:text-yellow-200">CSS</span> ,{" "}
-        <span className="font-medium dark:text-yellow-200">JavaScript</span> ,{" "}
+        <span className="font-medium dark:text-yellow-200">MERN and Python</span>{" "}
+        stack — covering{" "}
         <span className="font-medium dark:text-yellow-200">React</span> ,{" "}
         <span className="font-medium dark:text-yellow-200">Node.js</span> ,{" "}
         <span className="font-medium dark:text-yellow-200">Express</span> ,{" "}
         <span className="font-medium dark:text-yellow-200">MongoDB</span> ,{" "}
         <span className="font-medium dark:text-yellow-200">Tailwind CSS</span> ,{" "}
         <span className="font-medium dark:text-yellow-200">TypeScript</span> ,
+        <span className="font-medium dark:text-yellow-200">Flask</span> ,
+        <span className="font-medium dark:text-yellow-200">Django</span> ,
         <span className="font-medium dark:text-yellow-200"> Redux Toolkit</span>{" "}
         , and more. My core stack is{" "}
         <span className="font-medium dark:text-yellow-200">MERN</span> with{" "}
