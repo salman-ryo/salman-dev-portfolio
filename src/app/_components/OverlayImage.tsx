@@ -2,7 +2,7 @@ import React from 'react'
 import CarouselCardB from './CarouselB'
 
 type OverlayImagePropType = {
-    urls: any;
+    urls: string[];
     setZoomImages: React.Dispatch<React.SetStateAction<boolean>>
 }
 export default function OverlayImage({urls, setZoomImages}: OverlayImagePropType ) {

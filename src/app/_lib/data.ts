@@ -28,9 +28,9 @@ export const projectsData = [
       "Developed a comprehensive e-commerce application using NextJS for both the front end and backend. Achieved a modern aesthetic with Tailwind CSS and Tail Blocks. Implemented Server Side Rendering and Client Side Rendering for optimized performance. Featured a dedicated admin dashboard with light and dark themes for efficient product management.",
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "JWT", "Context API"],
     imageUrl: [
-      "/projects/fit-wear/FitWear1.png",
-      "/projects/fit-wear/FitWear2.png",
-      "/projects/fit-wear/FitWear3.png",
+      "/projects/fit-wear/FitWear1.webp",
+      "/projects/fit-wear/FitWear2.webp",
+      "/projects/fit-wear/FitWear3.webp",
     ],
     hostedUrl: "https://fit-wear.vercel.app",
   },
@@ -40,8 +40,8 @@ export const projectsData = [
       "Crafted a dynamic MERN stack cloud application for seamless note storage and management. Leveraged React.js, Express.js, MongoDB, and Json Web Token for robust authentication and authorization. Implemented the Context API and Restful API along with React Bootstrap, custom components, and icons. Ensured security with bcryptJS and salts for user password encryption. Implemented an email verification system using nodemailer's OTP function to enhance account security.",
     tags: ["React", "Express", "MongoDB", "Node.js", "Context API", "Bootstrap"],
     imageUrl: [
-      "/projects/my-notes/MyNotes1.png",
-      "/projects/my-notes/MyNotes2.png",
+      "/projects/my-notes/MyNotes1.webp",
+      "/projects/my-notes/MyNotes2.webp",
     ],
     hostedUrl: "https://my-notes-dev.vercel.app/",
   },
@@ -51,11 +51,11 @@ export const projectsData = [
       "Developed a React and Firebase-powered job posting platform with real-time features. Users can login using email or Google, post jobs, and receive instant notifications for new applications. Ensured a seamless application workflow, allowing job posters to efficiently manage applications within the platform.",
     tags: ["React", "Firebase", "MongoDB", "Tailwind"],
     imageUrl: [
-      "/projects/hire-matrix/login.png",
-      "/projects/hire-matrix/jobs.png",
-      "/projects/hire-matrix/details.png",
-      "/projects/hire-matrix/apps.png",
-      "/projects/hire-matrix/app.png",
+      "/projects/hire-matrix/login.webp",
+      "/projects/hire-matrix/jobs.webp",
+      "/projects/hire-matrix/details.webp",
+      "/projects/hire-matrix/apps.webp",
+      "/projects/hire-matrix/app.webp",
     ],
     hostedUrl: "https://hire-matrix.vercel.app",
   },
@@ -65,8 +65,8 @@ export const projectsData = [
       "Developed a user-friendly front-end React news application that seamlessly fetches news from a backend using a News API. Showcased a polished UI crafted with Bootstrap for a clean and intuitive design. Users can stay informed and navigate through the latest news effortlessly, making it an engaging platform for accessing up-to-date information.",
     tags: ["React", "Express", "MongoDB", "NodeJS", "Context API", "Bootstrap"],
     imageUrl: [
-      "/projects/news-guy/NewsGuy1.png",
-      "/projects/news-guy/NewsGuy2.png",
+      "/projects/news-guy/NewsGuy1.webp",
+      "/projects/news-guy/NewsGuy2.webp",
     ],
   },
   {
@@ -75,8 +75,8 @@ export const projectsData = [
       "Designed a sleek front-end NextJS application that leverages a Rapid API (Netflix) to dynamically fetch and display movie/show details. Implemented dynamic routing for a seamless and intuitive user experience. Provided an immersive platform for users to discover and explore their favorite movies and shows.",
     tags: ["Next.js", "React", "Rapid API", "MongoDB", "NodeJS"],
     imageUrl: [
-      "/projects/binge-watch/BingeWatch1.png",
-      "/projects/binge-watch/BingeWatch2.png",
+      "/projects/binge-watch/BingeWatch1.webp",
+      "/projects/binge-watch/BingeWatch2.webp",
     ],
   },
   {
@@ -85,8 +85,8 @@ export const projectsData = [
       "Introduced 'MyChat', a real-time chat application utilizing React and Socket.IO to facilitate seamless message sharing among participants within the same room. This interactive platform enhances communication through instant updates, providing a dynamic and engaging environment for users. The combination of React and Socket.IO in the context of Node.js creates a robust foundation for real-time chat functionality.",
     tags: ["React", "Socket.io", "Node.js"],
     imageUrl: [
-      "/projects/my-chat/MyChat1.png",
-      "/projects/my-chat/MyChat2.png",
+      "/projects/my-chat/MyChat1.webp",
+      "/projects/my-chat/MyChat2.webp",
     ],
   },
 ];

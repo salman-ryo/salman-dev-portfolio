@@ -4,7 +4,7 @@ import {Carousel} from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 type CarouselProps ={
-    images:any
+    images: string[]
 }
 
 export default function CarouselCardB ({images}: CarouselProps) {

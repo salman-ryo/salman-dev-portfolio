@@ -23,6 +23,17 @@ export default function Contact() {
     },
   };
   const [showForm, setShowForm] = useState(false);
+  const [formData, setFormData] = useState({
+    email: "",
+    message: "",
+  });
+  const resetForm = () => {
+    setFormData({
+      email: "",
+      message: "",
+    });
+  };
+
   return (
     <section
       id="contact"
@@ -33,7 +44,7 @@ export default function Contact() {
 
       <p className="text-gray-700 dark:text-gray-200 mt-6">
         Please contact me directly on my email{" "}
-        <a className="font-semibold dark:text-blue-400 underline dark:no-underline" href="mailto:dev.salman1508@gmail.com">
+        <a className="font-semibold text-[#0478a5e3] dark:text-blue-400 underline dark:no-underline" href="mailto:dev.salman1508@gmail.com">
           dev.salman1508@gmail.com
         </a>{" "}
         or through the form below:
@@ -49,6 +60,7 @@ export default function Contact() {
             return;
           }
           toast.success("Email sent successfully!");
+          resetForm();
         }}
       >
         {/* envelope */}
@@ -77,6 +89,8 @@ export default function Contact() {
           name="email"
           type="email"
           required
+          value={formData.email}
+          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
           maxLength={100}
           placeholder="Your email"
           variants={animateInput}
@@ -88,6 +102,8 @@ export default function Contact() {
           name="message"
           placeholder="Your message"
           required
+          value={formData.message}
+          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
           maxLength={5000}
           variants={animateInput}
           initial="initial"

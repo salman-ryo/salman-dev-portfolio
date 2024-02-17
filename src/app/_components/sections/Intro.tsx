@@ -37,7 +37,7 @@ const ScrollLink = Scroll.Link;
         </div>
        <div className="sm:w-2/3 sm:px-3"> 
       <motion.h1 className="mb-10 md:mb-32 text-gray-700 dark:text-gray-200 mt-6 px-4 text-2xl sm:text-4xl font-medium !leading-[1.5]" initial={{opacity: 0, scale: 0}} animate={{opacity: 1, scale: 1}} transition={{type:'just', duration:0.5}}>
-        <span className="font-semibold dark:text-yellow-400 ">Hello, I'm Salman.</span> I'm a {" "} <span className="font-semibold dark:text-cyan-100">Full-Stack </span>developer. I love building <span className="font-semibold dark:text-cyan-100">performance optimized web applications</span>. My focus is <span className="font-semibold dark:text-cyan-100">MERN Stack, Next.js </span>& <span className="font-semibold dark:text-cyan-100">Python</span>.
+        <span className="font-semibold dark:text-yellow-400 ">Hello, I'm Salman.</span> I'm a {" "} <span className="font-semibold dark:text-cyan-100">Full-Stack </span>developer. I love building performance optimized web applications. My focus is <span className="font-semibold dark:text-cyan-100">MERN Stack, Next.js </span>& <span className="font-semibold dark:text-cyan-100">Python</span>.
       </motion.h1>
 
       <motion.div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-2 items-center text-lg font-medium"
@@ -51,20 +51,20 @@ const ScrollLink = Scroll.Link;
           duration={800}
           offset={-100}
         >
-        <Link href={"#contact"} className="group bg-purple-900 text-white dark:bg-black dark:border-x-cyan-300 px-7 md:py-3 py-2 sm:py-1 sm:px-3 lg:px-7 sm:text-sm lg:text-lg flex items-center md:gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-purple-950 active:scale-105 transition border-2 border-black/10">
+        <Link href={"#contact"} className="group bg-[#0db9fde3] hover:bg-[#025fd1] text-white dark:bg-black dark:border-x-cyan-300 px-7 md:py-3 py-2 sm:py-1 sm:px-3 lg:px-7 sm:text-sm lg:text-lg flex items-center md:gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition border-2 border-black/10">
             Contact me <BsArrowRight className="opacity-80 group-hover:translate-x-2 transition"/>
         </Link>
         </ScrollLink>
 
-        <a href="/SalmanResume.pdf" download={true} className="group bg-white text-black dark:bg-black dark:text-white dark:border-x-cyan-300 px-7 md:py-3 py-2 sm:py-1 sm:px-3 lg:px-7 sm:text-sm lg:text-lg flex items-center md:gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition border-2 border-black/10">
+        <a href="/SalmanResume.pdf" download={true} className="group bg-white text-cyan-600 dark:bg-black dark:text-white dark:border-x-cyan-300 px-7 md:py-3 py-2 sm:py-1 sm:px-3 lg:px-7 sm:text-sm lg:text-lg flex items-center md:gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition border-2 border-black/10">
           Download CV <HiDownload className="opacity-80 group-hover:translate-y-1 transition"/>
         </a>
 
-        <a href="https://www.linkedin.com/in/dev-salman1508/" target="_blank" className="bg-white dark:bg-black text-slate-700 dark:text-slate-100 dark:border-x-cyan-300 hover:text-slate-950 text-[1.35rem] p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-110 active:scale-105 transition border-[1.5px] border-black/10">
-          <BsLinkedin/>
+        <a href="https://www.linkedin.com/in/dev-salm/" target="_blank" className="bg-white dark:bg-black text-slate-700 dark:text-slate-100 dark:border-x-cyan-300 hover:text-slate-950 text-[1.35rem] p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-110 active:scale-105 transition border-[1.5px] border-black/10">
+          <BsLinkedin className="text-cyan-500"/>
         </a>
         <a href="https://github.com/Salman-at-github" target="_blank" className="bg-white dark:bg-black dark:text-slate-100 dark:border-x-cyan-300 dark:hover:animate-spin text-slate-700 hover:text-slate-950 text-[1.35rem] p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-110 active:scale-105 transition border-[1.5px] border-black/10">
-          <BsGithub/>
+          <BsGithub className="text-cyan-500"/>
         </a>
       </motion.div>
       </div>
