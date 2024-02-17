@@ -56,15 +56,15 @@ const ScrollLink = Scroll.Link;
         </Link>
         </ScrollLink>
 
-        <a href="/SalmanResume.pdf" download={true} className="group bg-white text-cyan-600 dark:bg-black dark:text-white dark:border-x-cyan-300 px-7 md:py-3 py-2 sm:py-1 sm:px-3 lg:px-7 sm:text-sm lg:text-lg flex items-center md:gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition border-2 border-black/10">
+        <a href="/SalmanResume.pdf" download={true} className="group bg-white text-cyan-800 dark:bg-black dark:text-white dark:border-x-cyan-300 px-7 md:py-3 py-2 sm:py-1 sm:px-3 lg:px-7 sm:text-sm lg:text-lg flex items-center md:gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition border-2 border-black/10">
           Download CV <HiDownload className="opacity-80 group-hover:translate-y-1 transition"/>
         </a>
 
-        <a href="https://www.linkedin.com/in/dev-salm/" target="_blank" className="bg-white dark:bg-black text-slate-700 dark:text-slate-100 dark:border-x-cyan-300 hover:text-slate-950 text-[1.35rem] p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-110 active:scale-105 transition border-[1.5px] border-black/10">
-          <BsLinkedin className="text-cyan-500"/>
+        <a href="https://www.linkedin.com/in/dev-salm/" target="_blank" aria-label="Visit LinkedIn profile" className="bg-white dark:bg-black text-slate-700 dark:text-slate-100 dark:border-x-cyan-300 hover:text-slate-950 text-[1.35rem] p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-110 active:scale-105 transition border-[1.5px] border-black/10">
+          <BsLinkedin />
         </a>
-        <a href="https://github.com/Salman-at-github" target="_blank" className="bg-white dark:bg-black dark:text-slate-100 dark:border-x-cyan-300 dark:hover:animate-spin text-slate-700 hover:text-slate-950 text-[1.35rem] p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-110 active:scale-105 transition border-[1.5px] border-black/10">
-          <BsGithub className="text-cyan-500"/>
+        <a href="https://github.com/Salman-at-github" target="_blank" aria-label="Visit Github profile" className="bg-white dark:bg-black dark:text-slate-100 dark:border-x-cyan-300 dark:hover:animate-spin text-slate-700 hover:text-slate-950 text-[1.35rem] p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-110 active:scale-105 transition border-[1.5px] border-black/10">
+          <BsGithub />
         </a>
       </motion.div>
       </div>

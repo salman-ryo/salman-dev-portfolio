@@ -61,7 +61,7 @@ export default function Projects() {
                   {project.title}
                   {project.hostedUrl ? (
                     <span title="Visit Live Site">
-                      <a href={project.hostedUrl} target="_blank">
+                      <a href={project.hostedUrl} target="_blank" aria-label="View live project">
                         <BiLinkExternal className=" text-blue-400 hover:text-cyan-300 hover:scale-110 font-bold cursor-pointer" />
                       </a>
                     </span>
