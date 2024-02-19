@@ -9,7 +9,7 @@ body{
 #profilePhoto {
   box-shadow: 2px 4px 4px 2px rgb(0, 170, 249);
   animation: myBlob 5s ease-in-out infinite;
-  transition: all 5s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 @keyframes myBlob {

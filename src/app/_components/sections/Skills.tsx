@@ -37,7 +37,7 @@ export default function Skills() {
               transition={{delay: 0.05*index }}
               viewport={{once:true}} //animate only once
               >
-                <Link href={skill.link} target="_blank" title="Visit Official Documentation Page">
+                <Link href={skill.link} className="flex justify-center items-center flex-col" target="_blank" title="Visit Official Documentation Page">
                 <Image
                   src={theme ==='light'? skill.url.light : skill.url.dark}
                   alt={skill.name}
@@ -45,7 +45,7 @@ export default function Skills() {
                   width={64}
                   className="cursor-pointer hover:scale-125 transition"
                 />
-                <h2 className="font-semibold">{skill.name}</h2>
+                <h2 className="font-medium">{skill.name}</h2>
                 </Link>
               </motion.li>
             );

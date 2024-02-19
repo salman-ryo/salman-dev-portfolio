@@ -7,7 +7,7 @@ import Contact from './_components/sections/Contact';
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center overflow-hidden">
+    <main className="flex flex-col items-center overflow-hidden dark:text-gray-200">
       <div>
         <Intro/>
         <SectionDivider/>

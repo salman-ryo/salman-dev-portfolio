@@ -15,12 +15,12 @@ function ClientSideHeader() {
   return (
     <header className="z-[997] relative">
       <motion.div
-        className="fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none sm:top-6 sm:h-[3.25rem] sm:w-[29rem] sm:rounded-full bg-white dark:bg-gradient-to-tr from-[#040269] to-[#420178] sm:border border-white dark:border-gray-300 border-opacity-40 bg-opacity-80 filter shadow-lg shadow-black/[0.03] dark:shadow-cyan-300/[0.5] backdrop-blur-sm "
+        className="fixed top-0 left-1/2 h-[4rem] w-full rounded-none sm:top-6 sm:h-[3.25rem] sm:w-[29rem] sm:rounded-full bg-white dark:bg-gradient-to-tr from-[#040269] to-[#420178] sm:border border-white dark:border-gray-300 border-opacity-40 bg-opacity-80 filter shadow-lg shadow-black/[0.03] dark:shadow-cyan-300/[0.5] backdrop-blur-sm "
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
       <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-        <ul className="flex flex-wrap sm:flex-nowrap justify-center items-center gap-y-1 sm:gap-5 w-[22rem] sm:w-[initial] text-[0.9rem] font-medium text-gray-600 dark:text-gray-100">
+        <ul className="flex sm:flex-nowrap justify-center items-center gap-y-1 sm:gap-5 w-[22rem] sm:w-[initial] text-[0.9rem] font-medium text-gray-600 dark:text-gray-100">
           {links.map((link) => (
             <ScrollLink
               key={link.hash}
@@ -50,7 +50,7 @@ function ClientSideHeader() {
                   {link.name}
                   {link.name === activeTab && (
                     <motion.span
-                      className="-z-10 bg-gray-300 dark:bg-cyan-300 rounded-full absolute inset-0"
+                      className="-z-10 bg-gray-300 dark:bg-cyan-200 rounded-full absolute inset-0"
                       layoutId="activeTab"
                       transition={{
                         type: "sping",
