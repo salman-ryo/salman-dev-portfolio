@@ -5,9 +5,9 @@ import { BiLinkExternal } from "react-icons/bi";
 import { BiZoomIn } from "react-icons/bi";
 import { useActiveTab } from "../_context/ActiveTabContext";
 import Link from "next/link";
-import { ProjectProps } from "./types/generalTypes";
 import { skillsData } from "../_lib/data";
 import CarouselCard from "./CarouselCard";
+import { ProjectProps } from "../_lib/types";
 
 const Project : React.FC<ProjectProps> = ({ project, index,zoomImages, setZoomImages, setSelectedProjectUrl }) => {
   const projectRef = useRef<HTMLDivElement>(null);
