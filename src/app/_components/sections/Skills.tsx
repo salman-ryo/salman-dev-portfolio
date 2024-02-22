@@ -37,7 +37,7 @@ export default function Skills() {
               transition={{delay: 0.05*index }}
               viewport={{once:true}} //animate only once
               >
-                <Link href={skill.link} className="flex justify-center items-center flex-col" target="_blank" title="Visit Official Documentation Page">
+                <Link href={skill.link} className="flex justify-center items-center flex-col" target="_blank" rel="noopener noreferrer" title="Visit Official Documentation Page">
                 <Image
                   src={theme ==='light'? skill.url.light : skill.url.dark}
                   alt={skill.name}

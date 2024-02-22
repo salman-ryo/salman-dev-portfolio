@@ -22,9 +22,9 @@ export default function RootLayout({
   
   return (
     <html lang="en">
-      <body className={`relative ${poppins.className} dark:bg-gradient-to-tr from-black via-[#00114e] to-[#2b034a] text-gray-950 dark:text-gray-300 pt-28 sm:pt-36`}>
+      <body className={`relative ${poppins.className} dark:bg-gradient-to-br from-[#000026] via-[#31035e] to-[#000026] text-gray-950 dark:text-gray-300 pt-28 sm:pt-36`}>
 
-      <div className="bg-[#d579ff] dark:hidden h-[16rem] -z-10 w-[21.25rem] sm:w-[58.75rem] fixed top-[-6rem] right-[11rem] rounded-full blur-[10rem]"></div>
+      <div className="bg-[#d579ff] dark:hidden h-[16rem] -z-10 w-[21.25rem] sm:w-[58.75rem] fixed top-[-6rem] right-[7rem] rounded-full blur-[10rem]"></div>
         <div className="bg-cyan-200 dark:hidden h-[21.25rem] -z-10 w-[21.25rem] sm:w-[58.75rem] fixed top-[-1rem] left-[-35rem] md:left-[-33rem] lg:lef-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] rounded-full blur-[10rem]"></div>
 
         <ActiveTabContextProvider>
@@ -34,7 +34,6 @@ export default function RootLayout({
         <Footer/>
 
         <Toaster position="bottom-center"/>
-        {/* <CustomCursor/> */}
         <MagicWand/>
         <ThemeSwitch/>
         </ActiveTabContextProvider>

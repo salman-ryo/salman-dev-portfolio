@@ -1,11 +1,11 @@
 "use client";
+import Image from 'next/image';
 import React from 'react';
 import {Carousel} from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { CarouselProps } from '../_lib/types';
 
-type CarouselProps ={
-    images: string[]
-}
+
 
 export default function CarouselCardB ({images}: CarouselProps) {
     const settings = {
@@ -29,7 +29,7 @@ export default function CarouselCardB ({images}: CarouselProps) {
         <Carousel {...settings} >
           {images.map((url : string, index:number)=>{
             return(
-              <img key={index} src={url} alt='project' className='object-cover min-w-full min-h-full'/>
+              <Image height={400} width={800} key={index} src={url} alt='project' className='object-cover min-w-full min-h-full'/>
             )
           })}
         </Carousel>
