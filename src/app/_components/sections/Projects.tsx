@@ -1,12 +1,9 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import SectionHeading from "../SectionHeading";
 import { projectsData } from "../../_lib/data";
-import { useScroll } from "framer-motion";
 import { useSectionInView } from "../../_lib/hooks";
 import OverlayImage from "../OverlayImage";
-import { useActiveTab } from "../../_context/ActiveTabContext";
-import Link from "next/link";
 import Project from "../Project";
 
 

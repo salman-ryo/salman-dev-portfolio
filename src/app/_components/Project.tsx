@@ -58,7 +58,7 @@ const Project : React.FC<ProjectProps> = ({ project, index,zoomImages, setZoomIm
             <h2 className="font-bold text-xl shine">Stack :</h2>
             {skillTags.map((skill, index) => (
               <li key={index}>
-                <Link href="#skills">
+                <Link href="#skills" aria-label="Navigate to Skills section">
                 {skill &&
                   <img src={theme === 'light' ? skill.url.light : skill.url.dark} alt={"Skill"} className="h-10 w-10 cursor-pointer hover:scale-125 transition" title={skill.name} />
                 }
