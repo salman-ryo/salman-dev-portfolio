@@ -32,7 +32,6 @@ const Project : React.FC<ProjectProps> = ({ project, index,zoomImages, setZoomIm
         className={`overflow-hidden my-16 h-fit flex items-center justify-center md:justify-evenly flex-col-reverse ${
           index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse "
         }`}
-        key={index}
         ref={projectRef}
       >
         <motion.div
