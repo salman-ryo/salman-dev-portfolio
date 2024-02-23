@@ -35,7 +35,7 @@ function ClientSideHeader() {
               }}
             >
               <motion.li
-                className="relative h-3/4 flex justify-center items-center"
+                className="relative h-3/4 flex justify-center items-center hover:font-bold hover:text-black"
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
               >

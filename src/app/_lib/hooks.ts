@@ -10,7 +10,7 @@ export function useSectionInView(sectionName : string, threshold: number){
   
     useEffect(()=>{
       //add a one sec delay to prevent bounce when long scroll triggered
-      if(inView && Date.now() - lastClickTime > 1000){
+      if(inView && Date.now() - lastClickTime > 100){
         setActiveTab(sectionName)
       }
     },[inView])

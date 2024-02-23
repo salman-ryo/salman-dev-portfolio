@@ -1,16 +1,16 @@
 "use client"
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { useActiveTab } from '../_context/ActiveTabContext';
 
-function MagicWand() {
+const MagicWand = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [prevMousePosition, setPrevMousePosition] = useState({ x: 0, y: 0 });
   const [supportsMouse, setSupportsMouse] = useState(false);
 
-  const handleMouseMovement = (e) => {
+  const handleMouseMovement = useCallback((e) => {
     const { clientX, clientY } = e;
     setMousePosition({ x: clientX, y: clientY });
-  };
+  }, []);
 
   useEffect(() => {
     // Check if the device has a mouse
@@ -24,14 +24,12 @@ function MagicWand() {
         window.removeEventListener('mousemove', handleMouseMovement);
       };
     }
-  }, [supportsMouse]);
+  }, [supportsMouse, handleMouseMovement]);
 
   const colors = ["#03e3fc", "#e573f0", "#f0ca73"];
   const animationClass = ['star', 'star2', 'star3'];
 
-  const getRandomIndex = (arr) => {
-    return Math.floor(Math.random() * arr.length);
-  };
+  const getRandomIndex = (arr) => Math.floor(Math.random() * arr.length);
 
   const addDivAtMousePosition = () => {
     const myColor = colors[getRandomIndex(colors)];
@@ -63,7 +61,7 @@ function MagicWand() {
       addDivAtMousePosition();
       setPrevMousePosition(mousePosition);
     }
-  }, [mousePosition]);
+  }, [mousePosition, prevMousePosition]);
 
   const { theme } = useActiveTab();
 
@@ -80,6 +78,6 @@ function MagicWand() {
       <img src="pointerLight.svg" alt="cursor" className="h-12" />
     </div>
   ) : null;
-}
+};
 
 export default MagicWand;

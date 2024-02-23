@@ -10,10 +10,8 @@ import { CarouselProps } from '../_lib/types';
 export default function CarouselCardB ({images}: CarouselProps) {
     const settings = {
         showArrows: true,
-        interval: 5000,
-        dynamicHeight: true,
         stopOnHover: true,
-        infiniteLoop: true,
+        infiniteLoop: false,
         showStatus: false,
         transitionTime: 500,
         showThumbs: false,
@@ -29,7 +27,7 @@ export default function CarouselCardB ({images}: CarouselProps) {
         <Carousel {...settings} >
           {images.map((url : string, index:number)=>{
             return(
-              <Image height={400} width={800} key={index} src={url} alt='project' className='object-cover min-w-full min-h-full'/>
+                <Image height={400} width={800} key={index} src={url} alt='project' className='object-cover w-full'/>
             )
           })}
         </Carousel>

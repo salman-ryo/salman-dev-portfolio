@@ -35,17 +35,6 @@ export const projectsData = [
     hostedUrl: "https://fit-wear.vercel.app",
   },
   {
-    title: "MyNotes",
-    description:
-      "Crafted a dynamic MERN stack cloud application for seamless note storage and management. Leveraged React.js, Express.js, MongoDB, and Json Web Token for robust authentication and authorization. Implemented the Context API and Restful API along with React Bootstrap, custom components, and icons. Ensured security with bcryptJS and salts for user password encryption. Implemented an email verification system using nodemailer's OTP function to enhance account security.",
-    tags: ["React", "Express", "MongoDB", "Node.js", "Context API", "Bootstrap"],
-    imageUrl: [
-      "/projects/my-notes/MyNotes1.webp",
-      "/projects/my-notes/MyNotes2.webp",
-    ],
-    hostedUrl: "https://my-notes-dev.vercel.app/",
-  },
-  {
     title: "Hire Matrix",
     description:
       "Developed a React and Firebase-powered job posting platform with real-time features. Users can login using email or Google, post jobs, and receive instant notifications for new applications. Ensured a seamless application workflow, allowing job posters to efficiently manage applications within the platform.",
@@ -88,6 +77,17 @@ export const projectsData = [
       "/projects/my-chat/MyChat1.webp",
       "/projects/my-chat/MyChat2.webp",
     ],
+  },
+  {
+    title: "MyNotes",
+    description:
+      "Crafted a dynamic MERN stack cloud application for seamless note storage and management. Leveraged React.js, Express.js, MongoDB, and Json Web Token for robust authentication and authorization. Implemented the Context API and Restful API along with React Bootstrap, custom components, and icons. Ensured security with bcryptJS and salts for user password encryption. Implemented an email verification system using nodemailer's OTP function to enhance account security.",
+    tags: ["React", "Express", "MongoDB", "Node.js", "Context API", "Bootstrap"],
+    imageUrl: [
+      "/projects/my-notes/MyNotes1.webp",
+      "/projects/my-notes/MyNotes2.webp",
+    ],
+    hostedUrl: "https://my-notes-dev.vercel.app/",
   },
 ];
 

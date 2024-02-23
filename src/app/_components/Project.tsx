@@ -13,12 +13,12 @@ const Project : React.FC<ProjectProps> = ({ project, index,zoomImages, setZoomIm
   const projectRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: projectRef,
-    offset: ["start end", "500px end"],
+    offset: ["start end", "450px end"], //animation starts when START of the proj touches END of viewport, and complete by when 500px touches end of vp
   });
 
   const Pxis = useTransform(scrollYProgress, [0, 1], [600, 0]);
   const Nxis = useTransform(scrollYProgress, [0, 1], [-600, 0]);
-  const opacityScale = useTransform(scrollYProgress, [0, 1], [0.4, 1]);
+  const opacityScale = useTransform(scrollYProgress, [0, 1], [0.1, 1]);
 
   const { theme } = useActiveTab();
 
@@ -39,8 +39,7 @@ const Project : React.FC<ProjectProps> = ({ project, index,zoomImages, setZoomIm
           className="w-2/3 text-center md:w-1/3 flex items-center justify-center flex-col"
           style={{
             x: index % 2 === 0 ? Nxis : Pxis,
-            opacity: opacityScale,
-            scale: opacityScale,
+            opacity:opacityScale
           }}
         >
           <h3 className="text-2xl font-medium flex  items-center justify-center gap-2  dark:text-yellow-400">
@@ -71,7 +70,7 @@ const Project : React.FC<ProjectProps> = ({ project, index,zoomImages, setZoomIm
           className="w-full md:w-1/2 h-fit px-6 mb-6 md:mb-0 relative"
           style={{
             x: index % 2 === 0 ? Pxis : Nxis,
-            scale: opacityScale,
+            opacity: opacityScale
           }}
         >
           {!zoomImages && (

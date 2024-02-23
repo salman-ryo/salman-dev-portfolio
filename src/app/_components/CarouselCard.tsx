@@ -8,12 +8,12 @@ import { CarouselProps } from '../_lib/types';
 export default function CarouselCard ({images}: CarouselProps) {
     const settings = {
         showArrows: false,
-        interval: 3000,
+        interval: 5000,
         dynamicHeight: true,
         stopOnHover: true,
         infiniteLoop: true,
         showStatus: false,
-        transitionTime: 500,
+        transitionTime: 1000,
         showThumbs: false,
         showIndicators: true,
         swipeable: true,
