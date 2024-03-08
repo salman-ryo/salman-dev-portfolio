@@ -2,14 +2,10 @@
 const nextConfig = {
     images: {
         remotePatterns: [
-          {
-            protocol: 'https',
-            hostname: 'avatars.githubusercontent.com',
-          },
         ],
       },
     eslint:{
-      ignoreDuringBuilds:true
+      ignoreDuringBuilds:false
     }
 }
 
