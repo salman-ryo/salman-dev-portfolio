@@ -40,9 +40,9 @@ export const projectsData = [
       "Crafted a dynamic MERN stack cloud application for seamless note storage and management. Leveraged React.js, Express.js, MongoDB, and Json Web Token for robust authentication and authorization. Implemented the Context API and Restful API along with React Bootstrap, custom components, and icons. Ensured security with bcryptJS and salts for user password encryption. Implemented an email verification system using nodemailer's OTP function to enhance account security.",
     tags: ["React", "Express", "MongoDB", "Node.js", "Context API", "Bootstrap"],
     imageUrl: [
-      "/projects/news-guy/mynotes1.webp",
-      "/projects/news-guy/mynotes2.webp",
-      "/projects/news-guy/mynotes3.webp",
+      "/projects/my-notes/mynotes1.webp",
+      "/projects/my-notes/mynotes2.webp",
+      "/projects/my-notes/mynotes3.webp",
     ],
     hostedUrl: "https://my-notes-dev.vercel.app/",
   },
