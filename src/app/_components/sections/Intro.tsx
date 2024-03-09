@@ -51,7 +51,7 @@ const ScrollLink = Scroll.Link;
         </Link>
         </ScrollLink>
 
-        <a href="/SalmanResume.pdf" download={true} className="group border-[#00AAF9] dark:bg-black dark:text-white dark:border-x-cyan-300 px-7 md:py-3 py-2 lg:px-7 sm:text-sm lg:text-lg flex items-center md:gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-100 transition border-2 ">
+        <a href="/WebResumeSalman.pdf" download={true} className="group border-[#00AAF9] dark:bg-black dark:text-white dark:border-x-cyan-300 px-7 md:py-3 py-2 lg:px-7 sm:text-sm lg:text-lg flex items-center md:gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-100 transition border-2 ">
           Download CV <HiDownload className="opacity-80 group-hover:translate-y-1 transition"/>
         </a>
 
