@@ -18,7 +18,6 @@ const ScrollLink = Scroll.Link;
 
   const downloadThrottled = useCallback(
     throttle(() => {
-      // Your download logic here
       window.location.href = "/WebResumeSalman.pdf";
     }, 5000), // Adjust the delay (in milliseconds) as needed
     []
