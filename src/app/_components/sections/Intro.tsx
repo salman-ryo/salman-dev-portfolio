@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-import React from "react";
+import React, { useCallback } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {BsArrowRight, BsGithub, BsLinkedin} from 'react-icons/bs';
@@ -8,12 +8,21 @@ import {HiDownload} from 'react-icons/hi';
 import { useSectionInView } from "../../_lib/hooks";
 import Scroll from 'react-scroll';
 import dynamic from "next/dynamic";
+import { throttle } from "@/app/_utils/throttle";
 const ScrollLink = Scroll.Link;
 
 
   function NoSSRComponent() {
   //use custom hook takes tab, threshold as props
   const {ref} = useSectionInView('Home',0.75);
+
+  const downloadThrottled = useCallback(
+    throttle(() => {
+      // Your download logic here
+      window.location.href = "/WebResumeSalman.pdf";
+    }, 5000), // Adjust the delay (in milliseconds) as needed
+    []
+  );
 
   return (
     <section ref={ref} className="mb-28 sm:mb-6 w-full sm:max-w-[80rem] px-6 mx-auto text-center scroll-mt-24" id="home">
@@ -51,9 +60,9 @@ const ScrollLink = Scroll.Link;
         </Link>
         </ScrollLink>
 
-        <a href="/WebResumeSalman.pdf" download={true} className="group border-[#00AAF9] dark:bg-black dark:text-white dark:border-x-cyan-300 px-7 md:py-3 py-2 lg:px-7 sm:text-sm lg:text-lg flex items-center md:gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-100 transition border-2 ">
+        <button onClick={downloadThrottled} className="group border-[#00AAF9] dark:bg-black dark:text-white dark:border-x-cyan-300 px-7 md:py-3 py-2 lg:px-7 sm:text-sm lg:text-lg flex items-center md:gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-100 transition border-2 ">
           Download CV <HiDownload className="opacity-80 group-hover:translate-y-1 transition"/>
-        </a>
+        </button>
 
         <a href="https://www.linkedin.com/in/dev-salm/" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile" className="bg-white dark:bg-black text-slate-700 dark:text-slate-100 dark:border-x-cyan-300 hover:text-slate-950 text-[1.35rem] p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-110 active:scale-105 transition border-[1.5px] border-black/10">
           <BsLinkedin />
