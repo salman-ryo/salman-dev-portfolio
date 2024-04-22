@@ -6,6 +6,7 @@ const MagicWand = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [prevMousePosition, setPrevMousePosition] = useState({ x: 0, y: 0 });
   const [supportsMouse, setSupportsMouse] = useState(false);
+  const [stars, setStars] = useState([]);
 
   const handleMouseMovement = useCallback((e) => {
     const { clientX, clientY } = e;
@@ -26,57 +27,70 @@ const MagicWand = () => {
     }
   }, [supportsMouse, handleMouseMovement]);
 
-  const colors = ["#03e3fc", "#e573f0", "#f0ca73"];
-  const animationClass = ['star', 'star2', 'star3'];
-
-  const getRandomIndex = (arr) => Math.floor(Math.random() * arr.length);
-
-  const addDivAtMousePosition = () => {
-    const myColor = colors[getRandomIndex(colors)];
-    const myClass = animationClass[getRandomIndex(animationClass)];
-
-    const newDiv = document.createElement('span');
-    newDiv.style.position = 'fixed';
-    newDiv.style.left = `${mousePosition.x + 20}px`;
-    newDiv.style.top = `${mousePosition.y + 20}px`;
-    newDiv.style.pointerEvents = 'auto';
-    newDiv.innerHTML = `
-      <svg class=${myClass} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20">
-        <polygon points="50,0 61.8,38.2 100,50 61.8,61.8 50,100 38.2,61.8 0,50 38.2,38.2" fill=${myColor} />
-      </svg>`;
-
-    document.body.appendChild(newDiv);
-
-    setTimeout(() => {
-      document.body.removeChild(newDiv);
-    }, 1000);
-  };
-
   useEffect(() => {
     const xDiff = mousePosition.x - prevMousePosition.x;
     const yDiff = mousePosition.y - prevMousePosition.y;
     const distance = Math.sqrt(xDiff ** 2 + yDiff ** 2);
 
     if (distance >= 20) {
-      addDivAtMousePosition();
+      addStar();
       setPrevMousePosition(mousePosition);
     }
   }, [mousePosition, prevMousePosition]);
 
+  const addStar = () => {
+    const colors = ["#03e3fc", "#e573f0", "#f0ca73"];
+    const animationClass = ['star', 'star2', 'star3'];
+
+    const myColor = colors[Math.floor(Math.random() * colors.length)];
+    const myClass = animationClass[Math.floor(Math.random() * animationClass.length)];
+
+    const newStar = {
+      id: Date.now(),
+      x: mousePosition.x + 20,
+      y: mousePosition.y + 20,
+      color: myColor,
+      animationClass: myClass
+    };
+
+    setStars(prevStars => [...prevStars, newStar]);
+
+    setTimeout(() => {
+      setStars(prevStars => prevStars.filter(star => star.id !== newStar.id));
+    }, 1000);
+  };
+
   const { theme } = useActiveTab();
 
   return supportsMouse ? (
-    <div
-      id="cucu"
-      className={`hidden sm:block fixed z-[999]`}
-      style={{
-        top: `${mousePosition.y + 2}px`,
-        left: `${mousePosition.x - 11}px`,
-        pointerEvents: 'auto',
-      }}
-    >
-      <img src="pointerLight.svg" alt="cursor" className="h-12" />
-    </div>
+    <>
+      <div
+        id="cucu"
+        className={`hidden sm:block fixed z-[999]`}
+        style={{
+          top: `${mousePosition.y + 2}px`,
+          left: `${mousePosition.x - 11}px`,
+          pointerEvents: 'auto',
+        }}
+      >
+        <img src="pointerLight.svg" alt="cursor" className="h-12" />
+      </div>
+      {stars.map(star => (
+        <span
+          key={star.id}
+          style={{
+            position: 'fixed',
+            left: `${star.x}px`,
+            top: `${star.y}px`,
+            pointerEvents: 'auto',
+          }}
+        >
+          <svg className={star.animationClass} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20">
+            <polygon points="50,0 61.8,38.2 100,50 61.8,61.8 50,100 38.2,61.8 0,50 38.2,38.2" fill={star.color} />
+          </svg>
+        </span>
+      ))}
+    </>
   ) : null;
 };
 
