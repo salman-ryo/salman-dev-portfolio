@@ -33,7 +33,7 @@ const ScrollLink = Scroll.Link;
               height={300}
               width={300}
               alt="Salman Portrait"
-              className="h-36 w-36 sm:h-60 sm:w-60 md:h-[16rem] md:w-[16rem] object-cover rounded-full border-[0.2rem] border-white  dark:bg-[#05012e] dark:border-[#900ddb] dark:brightness-90"
+              className="h-36 w-36 sm:h-60 sm:w-60 md:h-[16rem] md:w-[16rem] object-cover rounded-full border-[0.2rem] border-white  dark:bg-[#05012e] dark:border-[#900ddb]"
               id="profilePhoto"
             />
           </motion.div>
@@ -63,10 +63,10 @@ const ScrollLink = Scroll.Link;
           Download CV <HiDownload className="opacity-80 group-hover:translate-y-1 transition"/>
         </button>
 
-        <a href="https://www.linkedin.com/in/dev-salm/" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile" className="bg-white dark:bg-black text-slate-700 dark:text-slate-100 dark:border-x-cyan-300 hover:text-slate-950 text-[1.35rem] p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-110 active:scale-105 transition border-[1.5px] border-black/10">
+        <a href="https://www.linkedin.com/in/dev-salm/" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile" className="bg-white dark:bg-black text-slate-700 dark:text-slate-100 dark:border-x-cyan-300 hover:text-slate-950 text-[1.35rem] p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-110 active:scale-105 transition border-2 border-black/10">
           <BsLinkedin />
         </a>
-        <a href="https://github.com/Salman-at-github" target="_blank" rel="noopener noreferrer" aria-label="Visit Github profile" className="bg-white dark:bg-black dark:text-slate-100 dark:border-x-cyan-300 dark:hover:animate-spin text-slate-700 hover:text-slate-950 text-[1.35rem] p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-110 active:scale-105 transition border-[1.5px] border-black/10">
+        <a href="https://github.com/Salman-at-github" target="_blank" rel="noopener noreferrer" aria-label="Visit Github profile" className="bg-white dark:bg-black dark:text-slate-100 dark:border-x-cyan-300 dark:hover:animate-spin text-slate-700 hover:text-slate-950 text-[1.35rem] p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-110 active:scale-105 transition border-2 border-black/10">
           <BsGithub />
         </a>
       </motion.div>

@@ -70,7 +70,7 @@ export default function Contact() {
           animate={showForm? {x:100,y:1000, rotate:100} : {}}
           transition={{duration:1.8}}
         >
-          <div className="w-full h-1 bg-blue-500 mb-4"></div>
+          <div className="w-full h-1 bg-blue-500 dark:bg-cyan-400 mb-4"></div>
           <div className="flex items-center justify-center">
             <div className="flex p-1 border rounded-bl-md rounded-br-md border-l-gray-300 border-r-gray-300 border-b-gray-300 justify-center items-center gap-2 cursor-pointer hover:bg-slate-200 dark:hover:bg-black" onClick={()=>{setShowForm(true)}}>
                 <h1>View Form</h1>
@@ -85,7 +85,7 @@ export default function Contact() {
         </motion.div>
 
         <motion.input
-          className="h-14 px-4 rounded-lg border-[1.5px] dark:border-black dark:bg-black dark:border-b-cyan-300 dark:text-white transition-all "
+          className="h-14 px-4 rounded-lg border-2 dark:border-black dark:bg-black dark:border-b-cyan-300 dark:text-white transition-all "
           name="email"
           type="email"
           required
@@ -98,7 +98,7 @@ export default function Contact() {
           animate={showForm? "animate" :""}
         />
         <motion.textarea
-          className="h-52 my-3 rounded-lg border-[1.5px] dark:border-black dark:bg-black dark:border-b-cyan-300 dark:text-white p-4  transition-all "
+          className="h-52 my-3 rounded-lg border-2 dark:border-black dark:bg-black dark:border-b-cyan-300 dark:text-white p-4  transition-all "
           name="message"
           placeholder="Your message"
           required
