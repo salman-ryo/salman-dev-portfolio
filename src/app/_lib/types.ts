@@ -4,6 +4,7 @@ export type SectionHeadingProps = {
 
 export interface Project {
     title: string;
+    subTitle?:string;
     hostedUrl?: string;
     description: string;
     imageUrl: string[];

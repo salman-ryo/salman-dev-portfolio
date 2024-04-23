@@ -26,7 +26,7 @@ const MagicWand = () => {
       };
     }
   }, [supportsMouse, handleMouseMovement]);
-
+  
   useEffect(() => {
     const xDiff = mousePosition.x - prevMousePosition.x;
     const yDiff = mousePosition.y - prevMousePosition.y;

@@ -24,6 +24,7 @@ export const links = [
 export const projectsData = [
   {
     title: "Fit-Wear",
+    subTitle:"E-Commerce",
     description:
       "Developed a comprehensive e-commerce application using NextJS for both the front end and backend. Achieved a modern aesthetic with Tailwind CSS and Tail Blocks. Implemented Server Side Rendering and Client Side Rendering for optimized performance. Featured a dedicated admin dashboard with light and dark themes for efficient product management.",
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "JWT", "Context API"],
@@ -36,6 +37,7 @@ export const projectsData = [
   },
   {
     title: "MyNotes",
+    subTitle:"Cloud Notebook",
     description:
       "Crafted a dynamic MERN stack cloud application for seamless note storage and management. Leveraged React.js, Express.js, MongoDB, and Json Web Token for robust authentication and authorization. Implemented the Context API and Restful API along with React Bootstrap, custom components, and icons. Ensured security with bcryptJS and salts for user password encryption. Implemented an email verification system using nodemailer's OTP function to enhance account security.",
     tags: ["React", "Express", "MongoDB", "Node.js", "Context API", "Bootstrap"],
@@ -47,7 +49,20 @@ export const projectsData = [
     hostedUrl: "https://my-notes-dev.vercel.app/",
   },
   {
+    title: "Block-It",
+    subTitle:"Chrome Extension",
+    description:
+      "Developed a lightweight Chrome extension aimed at empowering users to restrict access to specified websites according to individual preferences. BlockIt is a simple yet efficient site-blocking extension (17.6KB) leveraging service workers to seamlessly block user-defined websites, stored locally for personalized control.",
+    tags: ["JavaScript", "HTML", "CSS"],
+    imageUrl: [
+      "/projects/blockit/ext.webp",
+      "/projects/blockit/blockedpage.webp",
+    ],
+    hostedUrl: "https://github.com/Salman-at-github/blockit",
+  },
+  {
     title: "Hire Matrix",
+    subTitle:"Firebase App",
     description:
       "Developed a React and Firebase-powered job posting platform with real-time features. Users can login using email or Google, post jobs, and receive instant notifications for new applications. Ensured a seamless application workflow, allowing job posters to efficiently manage applications within the platform.",
     tags: ["React", "Firebase", "MongoDB", "Tailwind"],
@@ -62,6 +77,7 @@ export const projectsData = [
   },
   {
     title: "NewsGuy",
+    subTitle:"News Platform",
     description:
       "Developed a user-friendly front-end React news application that seamlessly fetches news from a backend using a News API. Showcased a polished UI crafted with Bootstrap for a clean and intuitive design. Users can stay informed and navigate through the latest news effortlessly, making it an engaging platform for accessing up-to-date information.",
     tags: ["React", "Express", "MongoDB", "NodeJS", "Context API", "Bootstrap"],
@@ -82,6 +98,7 @@ export const projectsData = [
   },
   {
     title: "MyChat",
+    subTitle:"Socket.io",
     description:
       "Introduced 'MyChat', a real-time chat application utilizing React and Socket.IO to facilitate seamless message sharing among participants within the same room. This interactive platform enhances communication through instant updates, providing a dynamic and engaging environment for users. The combination of React and Socket.IO in the context of Node.js creates a robust foundation for real-time chat functionality.",
     tags: ["React", "Socket.io", "Node.js"],
