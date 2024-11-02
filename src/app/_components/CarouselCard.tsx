@@ -26,7 +26,7 @@ export default function CarouselCard ({images}: CarouselProps) {
         <Carousel {...settings} >
           {images.map((url : string, index:number)=>{
             return(
-              <Image key={index} width={600} height={300} src={url} alt='project' className='object-cover min-w-full min-h-full'/>
+              <Image key={index} width={600} height={300} src={url} alt='project' unoptimized className='object-cover min-w-full min-h-full'/>
             )
           })}
         </Carousel>

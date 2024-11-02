@@ -54,7 +54,7 @@ const Project : React.FC<ProjectProps> = ({ project, index,zoomImages, setZoomIm
           {project.subTitle && 
           <h2 className="text-lg text-gray-600 dark:text-cyan-400">({project.subTitle})</h2>
           }
-          <p className="mt-2 leading-relaxed">{project.description}</p>
+          <p className="mt-2 leading-relaxed whitespace-pre-wrap">{project.description}</p>
           <ul className="flex flex-wrap items-center justify-center mt-4 gap-2 p-2 rounded-xl">
             <h2 className="font-bold text-xl shine">Stack :</h2>
             {skillTags.map((skill, index) => (

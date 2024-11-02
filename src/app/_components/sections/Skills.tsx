@@ -43,6 +43,7 @@ export default function Skills() {
                   alt={skill.name}
                   height={64}
                   width={64}
+                  unoptimized
                   className="cursor-pointer hover:scale-125 transition"
                 />
                 <h2 className="font-medium">{skill.name}</h2>

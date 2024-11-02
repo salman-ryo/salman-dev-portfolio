@@ -24,16 +24,16 @@ const ScrollLink = Scroll.Link;
   );
 
   return (
-    <section ref={ref} className="mb-28 sm:mb-6 w-full sm:max-w-[80rem] px-6 mx-auto text-center scroll-mt-24" id="home">
-      <div className="flex items-center justify-center flex-col md:flex-row 2xl:flex-col">
-        <div className="md:w-1/3 md:ml-2 md:self-start 2xl:self-auto flex items-center justify-center">
+    <section ref={ref} className="mb-28 sm:mb-6 w-full sm:max-w-[80rem] px-6 mx-auto text-center scroll-mt-24 2xl:h-[70dvh]" id="home">
+      <div className="flex items-center justify-center flex-col md:flex-row 2xl:mt-8">
+        <div className="md:w-1/3 md:ml-2 md:self-start 2xl:self-auto flex items-center justify-center 2xl:mr-20 2xl:mb-20">
           <motion.div initial={{opacity: 0, scale: 0}} animate={{opacity: 1, scale: 1}} transition={{type:'tween', duration:0.5}}>
             <Image
               src={'/newdp.webp'}
               height={300}
               width={300}
               alt="Salman Portrait"
-              className="h-36 w-36 sm:h-60 sm:w-60 md:h-[16rem] md:w-[16rem] object-cover rounded-full border-[0.2rem] border-white  dark:bg-[#05012e] dark:border-[#900ddb]"
+              className="h-36 w-36 sm:h-60 sm:w-60 md:h-[16rem] md:w-[16rem] 2xl:w-[20rem] 2xl:h-[20rem] object-cover rounded-full border-[0.2rem] border-white  dark:bg-[#05012e] dark:border-[#900ddb]"
               id="profilePhoto"
             />
           </motion.div>
@@ -43,7 +43,7 @@ const ScrollLink = Scroll.Link;
         <span className="font-semibold dark:text-yellow-400 ">Hello, I'm Salman.</span> I'm a {" "} <span className="font-semibold dark:text-cyan-100">Full-Stack </span>developer. I love building performance optimized web applications. My focus is <span className="font-semibold dark:text-cyan-100">MERN Stack, Next.js </span>& <span className="font-semibold dark:text-cyan-100">Python</span>.
       </motion.h1>
 
-      <motion.div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-2 items-center text-lg font-medium"
+      <motion.div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-2 items-center text-lg font-medium 2xl:gap-8"
       initial={{y:100, opacity:0}}
       animate={{y:0, opacity:1}}
       transition={{delay: 0.15}}>
@@ -66,7 +66,7 @@ const ScrollLink = Scroll.Link;
         <a href="https://www.linkedin.com/in/dev-salm/" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile" className="bg-white dark:bg-black text-slate-700 dark:text-slate-100 dark:border-x-cyan-300 hover:text-slate-950 text-[1.35rem] p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-110 active:scale-105 transition border-2 border-black/10">
           <BsLinkedin />
         </a>
-        <a href="https://github.com/Salman-at-github" target="_blank" rel="noopener noreferrer" aria-label="Visit Github profile" className="bg-white dark:bg-black dark:text-slate-100 dark:border-x-cyan-300 dark:hover:animate-spin text-slate-700 hover:text-slate-950 text-[1.35rem] p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-110 active:scale-105 transition border-2 border-black/10">
+        <a href="https://github.com/dev-salman-go" target="_blank" rel="noopener noreferrer" aria-label="Visit Github profile" className="bg-white dark:bg-black dark:text-slate-100 dark:border-x-cyan-300 dark:hover:animate-spin text-slate-700 hover:text-slate-950 text-[1.35rem] p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-110 active:scale-105 transition border-2 border-black/10">
           <BsGithub />
         </a>
       </motion.div>

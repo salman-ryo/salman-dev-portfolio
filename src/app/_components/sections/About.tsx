@@ -16,34 +16,22 @@ export default function About() {
       transition={{ delay: 0.175 }}
       id="about"
     >
-      <SectionHeading>About me</SectionHeading>
+      <SectionHeading>About Me</SectionHeading>
       <p className="mb-3">
-        I'm a passionate learner and aspiring{" "}
-        <span className="font-medium dark:text-yellow-200">Web Developer</span>{" "}
-        on a journey to turn my coding enthusiasm into a fulfilling career.
-        While my professional journey has led me through various non-technical
-        fields since 2019, my heart and mind have always been captivated by the
-        world of technology. A year of dedicated practice and learning has
-        equipped me with a robust skill set in the{" "}
-        <span className="font-medium dark:text-yellow-200">MERN and Python</span>{" "}
-        stack — covering{" "}
-        <span className="font-medium dark:text-yellow-200">React</span> ,{" "}
-        <span className="font-medium dark:text-yellow-200">Node.js</span> ,{" "}
-        <span className="font-medium dark:text-yellow-200">Express</span> ,{" "}
-        <span className="font-medium dark:text-yellow-200">MongoDB</span> ,{" "}
-        <span className="font-medium dark:text-yellow-200">Tailwind CSS</span> ,{" "}
-        <span className="font-medium dark:text-yellow-200">TypeScript</span> ,
-        <span className="font-medium dark:text-yellow-200">Flask</span> ,
-        <span className="font-medium dark:text-yellow-200">Django</span> ,
-        <span className="font-medium dark:text-yellow-200"> Redux Toolkit</span>{" "}
-        , and more. My core stack is{" "}
-        <span className="font-medium dark:text-yellow-200">MERN</span> with{" "}
-        <span className="font-medium dark:text-yellow-200">Next.js</span>.
+        I’m a dedicated and passionate <span className="font-medium dark:text-yellow-300 text-cyan-700">Full Stack Developer</span> with a strong foundation in the{" "}
+        <span className="font-medium dark:text-yellow-300 text-cyan-700">MERN</span> and <span className="font-medium dark:text-yellow-300 text-cyan-700">Python</span> stacks. My journey in the tech world began in 2019, driven by an insatiable curiosity and a love for problem-solving. Over the past few years, I have honed my skills through rigorous self-study, hands-on projects, and professional experiences.
+      </p>
+      <p className="mb-3">
+        I recently completed an internship as a <span className="font-medium dark:text-yellow-300 text-cyan-700">MERN Stack Developer</span>, where I collaborated with a talented team to build scalable web applications. During this internship, I developed and optimized features using <span className="font-medium dark:text-yellow-300 text-cyan-700">React, Next.js</span>, <span className="font-medium dark:text-yellow-300 text-cyan-700">Node.js</span>, <span className="font-medium dark:text-yellow-300 text-cyan-700">Express</span>, and <span className="font-medium dark:text-yellow-300 text-cyan-700">MongoDB</span>. This experience not only strengthened my technical abilities but also enhanced my teamwork and project management skills.
+      </p>
+      <p className="mb-3">
+        Currently, I am working full-time as a <span className="font-medium dark:text-yellow-300 text-cyan-700">Full Stack Developer</span>, where I design and implement robust solutions that drive business success. My role involves leveraging technologies such as <span className="font-medium dark:text-yellow-300 text-cyan-700">Next.js</span>, <span className="font-medium dark:text-yellow-300 text-cyan-700">Tailwind CSS</span>, <span className="font-medium dark:text-yellow-300 text-cyan-700">TypeScript</span>, <span className="font-medium dark:text-yellow-300 text-cyan-700">Flask</span>,<span className="font-medium dark:text-yellow-300 text-cyan-700"> Express</span>, and <span className="font-medium dark:text-yellow-300 text-cyan-700">Django</span> to create seamless and efficient user experiences. I am also proficient in using <span className="font-medium dark:text-yellow-300 text-cyan-700">Redux Toolkit</span> for state management and have cloud computing experience on cloud platforms like <span className="font-medium dark:text-yellow-300 text-cyan-700">AWS</span>.
+      </p>
+      <p className="mb-3">
+        My core expertise lies in the <span className="font-medium dark:text-yellow-300 text-cyan-700">MERN</span> stack, complemented by my proficiency in <span className="font-medium dark:text-yellow-300 text-cyan-700">Next.js</span>. I am continually expanding my knowledge and staying updated with the latest industry trends to deliver high-quality and innovative solutions.
       </p>
       <p>
-        I'm currently on the lookout for opportunities to apply my knowledge and
-        skills in a professional setting. I believe that sometimes all it takes
-        is the right opportunity to showcase what one is truly capable of.
+        I am eager to take on new challenges and contribute to impactful projects. Whether it’s developing cutting-edge web applications, optimizing performance, or exploring new technologies, I am committed to leveraging my skills to create meaningful and effective solutions.
       </p>
     </motion.section>
   );
