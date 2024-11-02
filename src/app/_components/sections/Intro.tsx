@@ -29,9 +29,11 @@ const ScrollLink = Scroll.Link;
         <div className="md:w-1/3 md:ml-2 md:self-start 2xl:self-auto flex items-center justify-center 2xl:mr-20 2xl:mb-20">
           <motion.div initial={{opacity: 0, scale: 0}} animate={{opacity: 1, scale: 1}} transition={{type:'tween', duration:0.5}}>
             <Image
-              src={'/newdp.webp'}
+              src={'/newdp.png'}
               height={300}
               width={300}
+              priority
+              unoptimized
               alt="Salman Portrait"
               className="h-36 w-36 sm:h-60 sm:w-60 md:h-[16rem] md:w-[16rem] 2xl:w-[20rem] 2xl:h-[20rem] object-cover rounded-full border-[0.2rem] border-white  dark:bg-[#05012e] dark:border-[#900ddb]"
               id="profilePhoto"

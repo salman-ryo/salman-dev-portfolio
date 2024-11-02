@@ -60,6 +60,7 @@ export const projectsData = [
     imageUrl: [
       "/projects/bhavishyan/bhav_1.webp",
       "/projects/bhavishyan/bhav_2.webp",
+      "/projects/bhavishyan/bhav_3.webp",
     ],
   },
   {
