@@ -42,7 +42,7 @@ export const projectsData = [
       "/projects/ias-sathi/ias_3.webp",
       "/projects/ias-sathi/ias_4.webp",
     ],
-    hostedUrl: "https://www.iassathi.com",
+    hostedUrl: "https://iassathi.com",
   },
   {
     title: "Bhavishyan",
@@ -62,6 +62,7 @@ export const projectsData = [
       "/projects/bhavishyan/bhav_2.webp",
       "/projects/bhavishyan/bhav_3.webp",
     ],
+    hostedUrl:"https://bhavishyayaan.com/"
   },
   {
     title: "AIMEERS",
@@ -282,3 +283,9 @@ export const skillsData = [
     link: "https://firebase.google.com/",
   },
 ];
+
+export const socialLinks = {
+  github:"https://github.com/salman-ryo",
+  linkedin:"https://www.linkedin.com/in/dev-salm/",
+  blog:"#",
+}

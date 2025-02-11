@@ -33,6 +33,7 @@ export const sendEmail = async (formData: FormData) => {
         propmessage: message,
       }),
     });
+    console.log("🚀 ~ sendEmail ~ data:", data)
 
     return { data };
   } catch (error: unknown) {

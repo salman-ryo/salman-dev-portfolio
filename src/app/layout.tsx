@@ -10,8 +10,9 @@ import { Toaster } from "react-hot-toast";
 const poppins = Poppins({ subsets: ["latin"], weight: "500" });
 
 export const metadata = {
+  metadataBaseL:new URL("https://dev-salman.vercel.app"),
   title: "Dev Salman",
-  description: "Salman is a Python / JavaScript full-stack web developer",
+  description: "Portfolio site of Ryo (alias Salman), a full-stack developer helping people build scalable SEO-friendly websites leveraging technologies like Next.js Express.js Django and others. Contact Ryo today for your software development needs.",
 };
 
 export default function RootLayout({
