@@ -65,8 +65,8 @@ const ScrollLink = Scroll.Link;
         </Link>
         </ScrollLink>
 
-        <Link href={socialLinks.blog} target="_blank" rel="noopener noreferrer" className="border-[#00AAF9] dark:bg-black dark:text-white dark:border-x-cyan-300 px-7 md:py-3 py-2 lg:px-7 sm:text-sm lg:text-lg flex items-center md:gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-100 transition border-2 ">
-          Check My Blog <FaBlogger  className="opacity-80"/>
+        <Link href={socialLinks.blog} target="_blank" rel="noopener noreferrer" className="border-[#00AAF9] dark:bg-black dark:text-white dark:border-x-cyan-300 px-7 md:py-3 py-2 lg:px-7 sm:text-sm lg:text-lg flex items-center md:gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-100 transition border-2 max-md:ml-2">
+          Check My Blog <FaBlogger  className="opacity-80 max-md:ml-2"/>
         </Link>
 
         <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile" className="bg-white dark:bg-black text-slate-700 dark:text-slate-100 dark:border-x-cyan-300 hover:text-slate-950 text-[1.35rem] p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-110 active:scale-105 transition border-2 border-black/10">
