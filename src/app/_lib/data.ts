@@ -287,5 +287,5 @@ export const skillsData = [
 export const socialLinks = {
   github:"https://github.com/salman-ryo",
   linkedin:"https://www.linkedin.com/in/dev-salm/",
-  blog:"https://theskepticdev.vercel.app"
+  blog:"https://www.the-skeptic-dev.in"
 }
