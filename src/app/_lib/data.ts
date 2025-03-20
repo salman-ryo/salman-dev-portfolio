@@ -58,7 +58,6 @@ export const projectsData = [
       "LLM",
       "RAG",
       "Vector DB",
-      "Modular Architecture",
     ],
     imageUrl: ["/projects/pdf-bot/ragol-gem.webp"],
     hostedUrl: "https://github.com/salman-ryo/pdf-bot",
