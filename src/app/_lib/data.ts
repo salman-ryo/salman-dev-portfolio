@@ -23,6 +23,48 @@ export const links = [
 
 export const projectsData = [
   {
+    title: "The Skeptic Dev",
+    subTitle: "Modern Block-Based Blog Platform",
+    description: `Skeptic Dev is a cutting-edge blog platform built with Next.js, inspired by the intuitive content editing experiences of Notion and Medium. Designed with a modular block-based editor, it allows users to create rich, interactive content featuring text, images, code with syntax highlighting, and embedded media. The platform leverages server-side rendering and best SEO practices to deliver optimal performance and search engine visibility. With robust authentication powered by NextAuth and an emphasis on developer experience using TypeScript, Tailwind CSS, and a component-based architecture, Skeptic Dev ensures both a seamless user experience and high-quality code maintainability. My contributions focused on integrating secure authentication flows, implementing a highly customizable editor, and optimizing SEO strategies, making the platform both scalable and efficient.`,
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind",
+      "NextAuth",
+      "SEO",
+      "React",
+      "Framer Motion",
+      "MongoDB",
+      "Shadcn",
+      "Tiptap",
+      "Node.js",
+    ],
+    imageUrl: [
+      "/projects/skeptic-dev/landing.webp",
+      "/projects/skeptic-dev/blogs.webp",
+      "/projects/skeptic-dev/new-blog.webp",
+    ],
+    hostedUrl: "https://the-skeptic-dev.in",
+  },
+  {
+    title: "PDF-Bot",
+    subTitle: "Local RAG for PDFs",
+    description: `PDF-Bot is a lightweight, local retrieval-augmented generation system built to index and query PDF documents using Langchain, Chroma, and Ollama. The project processes PDFs by loading them from a designated folder, splitting the content into manageable chunks using Langchain’s RecursiveCharacterTextSplitter, and indexing these chunks into a persistent Chroma vector database. It then employs an Ollama-powered LLM to generate detailed answers based on the retrieved context. With a modular architecture that separates document loading, text processing, database operations, and LLM interactions, PDF-Bot ensures efficient and accurate information retrieval. My contributions involved optimizing the document processing pipeline, refining the vector indexing strategy, and enhancing the LLM integration for more precise answer generation.`,
+    tags: [
+      "Python",
+      "Langchain",
+      "Chroma",
+      "Ollama",
+      "LLM",
+      "RAG",
+      "Vector DB",
+      "Modular Architecture",
+    ],
+    imageUrl: ["/projects/pdf-bot/ragol-gem.webp"],
+    hostedUrl: "https://github.com/salman-ryo/pdf-bot",
+  },
+
+  {
     title: "IAS Sathi",
     subTitle: "EdTech",
     description: `IAS Sathi is an innovative digital platform designed to empower civil services aspirants in India by providing comprehensive exam preparation resources. The application combines high-quality study material, interactive tools, and advanced AI-powered features to create an effective and engaging learning experience. Key features include an AI-driven chatbot offering instant answers to users' queries, stress management tools designed to help candidates maintain mental well-being throughout their preparation, and a robust task management system to optimize study plans. The app also provides simulated tests and quizzes to assess knowledge and track progress, ensuring aspirants are well-prepared for every challenge they face. My contributions involved developing core application features, focusing on user engagement through personalized stress-relief sessions powered by AI, and integrating the backend API for high performance and scalability. IAS Sathi is designed to enhance the study journey and support students in achieving their goals.`,
@@ -62,7 +104,7 @@ export const projectsData = [
       "/projects/bhavishyan/bhav_2.webp",
       "/projects/bhavishyan/bhav_3.webp",
     ],
-    hostedUrl:"https://bhavishyayaan.com/"
+    hostedUrl: "https://bhavishyayaan.com/",
   },
   {
     title: "AIMEERS",
@@ -285,7 +327,7 @@ export const skillsData = [
 ];
 
 export const socialLinks = {
-  github:"https://github.com/salman-ryo",
-  linkedin:"https://www.linkedin.com/in/dev-salm/",
-  blog:"https://www.the-skeptic-dev.in"
-}
+  github: "https://github.com/salman-ryo",
+  linkedin: "https://www.linkedin.com/in/dev-salm/",
+  blog: "https://www.the-skeptic-dev.in",
+};
